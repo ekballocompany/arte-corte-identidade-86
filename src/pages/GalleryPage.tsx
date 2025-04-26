@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import SectionTitle from "../components/SectionTitle";
 import { AspectRatio } from "../components/ui/aspect-ratio";
@@ -19,104 +18,104 @@ const GalleryPage = () => {
   const categories = ["Todos", "Cortes", "Barbas", "Ambiente"];
   const [activeCategory, setActiveCategory] = useState("Todos");
   
-  // Gallery items with real images
+  // Updated gallery items with carefully selected images
   const galleryItems = [
     // Cortes
     {
       id: 1,
-      image: "https://images.unsplash.com/photo-1622296089863-4288be4a1970?q=80&w=1374&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?q=80&w=1374&auto=format&fit=crop",
       category: "Cortes",
       title: "Corte Moderno"
     },
     {
       id: 2,
-      image: "https://images.unsplash.com/photo-1587909209111-5097ee578ec3?q=80&w=1374&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1504826260979-242151ee45c7?q=80&w=1374&auto=format&fit=crop",
       category: "Cortes",
       title: "Corte Clássico"
     },
     {
       id: 3,
-      image: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?q=80&w=1374&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=1374&auto=format&fit=crop",
       category: "Cortes",
       title: "Corte Degradê"
     },
     {
       id: 4,
-      image: "https://images.unsplash.com/photo-1504703395950-b89145a5425b?q=80&w=1170&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1567894340315-735d7c361db0?q=80&w=1374&auto=format&fit=crop",
       category: "Cortes",
       title: "Corte Executivo"
     },
     {
       id: 5,
-      image: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?q=80&w=1170&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=1374&auto=format&fit=crop",
       category: "Cortes",
       title: "Corte Texturizado"
     },
     // Barbas
     {
       id: 6,
-      image: "https://images.unsplash.com/photo-1519699047748-de8e457a634e?q=80&w=1160&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?q=80&w=1374&auto=format&fit=crop",
       category: "Barbas",
       title: "Barba Completa"
     },
     {
       id: 7,
-      image: "https://images.unsplash.com/photo-1508770411775-987edc0e3706?q=80&w=1171&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1590246814722-3b1526c75a82?q=80&w=1374&auto=format&fit=crop",
       category: "Barbas",
       title: "Barba Curta"
     },
     {
       id: 8,
-      image: "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?q=80&w=1160&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1592647420148-bfcc177e2117?q=80&w=1374&auto=format&fit=crop",
       category: "Barbas",
       title: "Barba com Fade"
     },
     {
       id: 9,
-      image: "https://images.unsplash.com/photo-1503443207922-dff7d543fd0e?q=80&w=1160&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1521119989659-a83eee488004?q=80&w=1374&auto=format&fit=crop",
       category: "Barbas",
       title: "Barba Afiada"
     },
     // Ambiente
     {
       id: 10,
-      image: "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=1170&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1585747733279-8f82c526b52b?q=80&w=1374&auto=format&fit=crop",
       category: "Ambiente",
       title: "Salão Premium"
     },
     {
       id: 11,
-      image: "https://images.unsplash.com/photo-1521405617584-1d9867aecad3?q=80&w=1170&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1532710093739-9470acff878f?q=80&w=1374&auto=format&fit=crop",
       category: "Ambiente",
       title: "Ambiente Exclusivo"
     },
     {
       id: 12,
-      image: "https://images.unsplash.com/photo-1608501078713-8e445a709b39?q=80&w=1170&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1512690459411-b9245aed614b?q=80&w=1374&auto=format&fit=crop",
       category: "Ambiente",
       title: "Estação de Trabalho"
     },
     {
       id: 13,
-      image: "https://images.unsplash.com/photo-1604687119351-b5b76e413533?q=80&w=1170&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1534297635766-a262cdcb8ee4?q=80&w=1374&auto=format&fit=crop",
       category: "Ambiente",
       title: "Ferramentas do Mestre"
     },
     {
       id: 14,
-      image: "https://images.unsplash.com/photo-1622296089172-10b3ec3bd025?q=80&w=1170&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1593702295094-ac9a038d4f43?q=80&w=1374&auto=format=crop",
       category: "Cortes",
       title: "Corte Personalizado"
     },
     {
       id: 15,
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=1170&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1622296089863-4288be4a1970?q=80&w=1374&auto=format&fit=crop",
       category: "Cortes",
       title: "Cliente Satisfeito"
     },
     {
       id: 16,
-      image: "https://images.unsplash.com/photo-1493957988430-a5f2e15f39a3?q=80&w=1170&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1507114845806-0347f6150324?q=80&w=1374&auto=format&fit=crop",
       category: "Ambiente",
       title: "Experiência Premium"
     }
@@ -127,14 +126,14 @@ const GalleryPage = () => {
     ? galleryItems 
     : galleryItems.filter(item => item.category === activeCategory);
   
-  // Instagram feed images
+  // Updated Instagram feed images
   const instagramImages = [
-    "https://images.unsplash.com/photo-1605497788044-5a32c7078486?q=80&w=687&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1584223000634-25aa718ceb6d?q=80&w=687&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1506634064465-7dab4de896ed?q=80&w=687&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1584316712724-f5d4c3033cd4?q=80&w=687&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1599351431005-c3dd80374aee?q=80&w=687&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1552058544-f2b08422138a?q=80&w=687&auto=format&fit=crop"
+    "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=1374&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1521119989659-a83eee488004?q=80&w=1374&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1567894340315-735d7c361db0?q=80&w=1374&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=1374&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1534297635766-a262cdcb8ee4?q=80&w=1374&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1585747733279-8f82c526b52b?q=80&w=1374&auto=format&fit=crop"
   ];
   
   return (
