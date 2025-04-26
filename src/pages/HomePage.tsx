@@ -2,7 +2,7 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import SectionTitle from "../components/SectionTitle";
-import { ArrowRight, MapPin, Phone, Scissors } from "lucide-react";
+import { ArrowDown, ArrowRight, MapPin, Phone, Scissors } from "lucide-react";
 
 const HomePage = () => {
   useEffect(() => {
@@ -21,16 +21,20 @@ const HomePage = () => {
         <div className="absolute inset-0 z-0 bg-black/40"></div>
         <div
           className="absolute inset-0 z-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/https://images.unsplash.com/photo-1695173122226-3a932002ab33?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')" }}
+          style={{ backgroundImage: "url('image-background-home.avif')" }}
+        ></div>
+        <div
+          className="absolute inset-0 z-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('gradient-background-home.png')" }}
         ></div>
 
         <div className="container-custom relative z-10 pt-20">
           <div className="max-w-xl">
-            <h5 className="text-brand-gold font-medium mb-4 tracking-widest animate-fade-in">GUSTAVO LADEIRA | VISAGISTA</h5>
+            {/* <h5 className="text-brand-gold font-medium mb-4 tracking-widest animate-fade-in">GUSTAVO LADEIRA | VISAGISTA</h5> */}
             <h1 className="heading-xl text-white mb-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
               Corte é arte.<br />Visagismo é identidade.
             </h1>
-            <p className="text-white/90 text-lg mb-8 animate-fade-in" style={{ animationDelay: "0.4s" }}>
+            <p className="text-white/90 mb-8 animate-fade-in md:text-lg text-sm" style={{ animationDelay: "0.4s" }}>
               Especialista em visagismo masculino, transformando aparências e realçando personalidades através de cortes precisos e personalizados.
             </p>
             <div className="flex flex-wrap gap-4 animate-fade-in" style={{ animationDelay: "0.6s" }}>
@@ -44,12 +48,15 @@ const HomePage = () => {
           </div>
         </div>
 
-        <div className="absolute bottom-10 left-0 right-0 flex justify-center animate-fade-in" style={{ animationDelay: "1s" }}>
+        <div className="absolute bottom-10 left-0 right-0 flex justify-center animate-fade-in mt-2 md:mt-4" style={{ animationDelay: "1s" }}>
           <div className="flex items-center text-white">
             <span className="mr-2 text-sm">Explore</span>
-            <ArrowRight size={16} className="animate-bounce" />
+            <ArrowDown size={16} className="animate-bounce" />
           </div>
         </div>
+
+
+
       </section>
 
       {/* Intro Section */}
