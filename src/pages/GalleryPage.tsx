@@ -18,106 +18,94 @@ const GalleryPage = () => {
   const categories = ["Todos", "Cortes", "Barbas", "Ambiente"];
   const [activeCategory, setActiveCategory] = useState("Todos");
   
-  // Updated gallery items with carefully selected images
+  // Updated gallery items with carefully selected dark theme images
   const galleryItems = [
     // Cortes
     {
       id: 1,
-      image: "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?q=80&w=1374&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1622296089863-4288be4a1970?q=80&w=2070",
       category: "Cortes",
-      title: "Corte Moderno"
+      title: "Corte Moderno Executivo",
+      alt: "Homem recebendo corte de cabelo moderno em barbearia elegante com iluminação baixa"
     },
     {
       id: 2,
-      image: "https://images.unsplash.com/photo-1504826260979-242151ee45c7?q=80&w=1374&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?q=80&w=2070",
       category: "Cortes",
-      title: "Corte Clássico"
+      title: "Acabamento Preciso",
+      alt: "Barbeiro realizando acabamento detalhado no corte masculino em ambiente escuro"
     },
     {
       id: 3,
-      image: "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=1374&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?q=80&w=2070",
       category: "Cortes",
-      title: "Corte Degradê"
+      title: "Técnica Apurada",
+      alt: "Barbeiro profissional usando técnicas precisas de corte em ambiente sofisticado"
     },
     {
       id: 4,
-      image: "https://images.unsplash.com/photo-1567894340315-735d7c361db0?q=80&w=1374&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=2074",
       category: "Cortes",
-      title: "Corte Executivo"
-    },
-    {
-      id: 5,
-      image: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=1374&auto=format&fit=crop",
-      category: "Cortes",
-      title: "Corte Texturizado"
+      title: "Estilo Clássico",
+      alt: "Cliente recebendo corte clássico em cadeira de barbeiro vintage"
     },
     // Barbas
     {
-      id: 6,
-      image: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?q=80&w=1374&auto=format&fit=crop",
+      id: 5,
+      image: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?q=80&w=2070",
       category: "Barbas",
-      title: "Barba Completa"
+      title: "Barba Bem Cuidada",
+      alt: "Detalhe de barba sendo aparada com precisão usando navalha tradicional"
+    },
+    {
+      id: 6,
+      image: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=2070",
+      category: "Barbas",
+      title: "Modelagem de Barba",
+      alt: "Processo de modelagem de barba com produtos especializados"
     },
     {
       id: 7,
-      image: "https://images.unsplash.com/photo-1590246814722-3b1526c75a82?q=80&w=1374&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1517832606299-7ae9b720a186?q=80&w=2076",
       category: "Barbas",
-      title: "Barba Curta"
-    },
-    {
-      id: 8,
-      image: "https://images.unsplash.com/photo-1592647420148-bfcc177e2117?q=80&w=1374&auto=format&fit=crop",
-      category: "Barbas",
-      title: "Barba com Fade"
-    },
-    {
-      id: 9,
-      image: "https://images.unsplash.com/photo-1521119989659-a83eee488004?q=80&w=1374&auto=format&fit=crop",
-      category: "Barbas",
-      title: "Barba Afiada"
+      title: "Barba Clássica",
+      alt: "Homem com barba bem aparada em ambiente de barbearia tradicional"
     },
     // Ambiente
     {
-      id: 10,
-      image: "https://images.unsplash.com/photo-1585747733279-8f82c526b52b?q=80&w=1374&auto=format&fit=crop",
+      id: 8,
+      image: "https://images.unsplash.com/photo-1521322714240-ee1d383eab62?q=80&w=2070",
       category: "Ambiente",
-      title: "Salão Premium"
+      title: "Ambiente Premium",
+      alt: "Interior elegante de barbearia com decoração vintage e iluminação suave"
+    },
+    {
+      id: 9,
+      image: "https://images.unsplash.com/photo-1595654056673-464307ef2b61?q=80&w=2070",
+      category: "Ambiente",
+      title: "Estação de Trabalho",
+      alt: "Estação de trabalho profissional com ferramentas tradicionais de barbearia"
+    },
+    {
+      id: 10,
+      image: "https://images.unsplash.com/photo-1605497788044-5a32c7078486?q=80&w=2074",
+      category: "Ambiente",
+      title: "Tradição e Modernidade",
+      alt: "Ambiente que mescla elementos tradicionais e modernos de barbearia"
     },
     {
       id: 11,
-      image: "https://images.unsplash.com/photo-1532710093739-9470acff878f?q=80&w=1374&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1626725451206-050b623aaf00?q=80&w=2070",
       category: "Ambiente",
-      title: "Ambiente Exclusivo"
+      title: "Detalhes Sofisticados",
+      alt: "Detalhe de produtos e ferramentas profissionais de barbearia"
     },
     {
       id: 12,
-      image: "https://images.unsplash.com/photo-1512690459411-b9245aed614b?q=80&w=1374&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1512690459411-b9245aed614b?q=80&w=2070",
       category: "Ambiente",
-      title: "Estação de Trabalho"
-    },
-    {
-      id: 13,
-      image: "https://images.unsplash.com/photo-1534297635766-a262cdcb8ee4?q=80&w=1374&auto=format&fit=crop",
-      category: "Ambiente",
-      title: "Ferramentas do Mestre"
-    },
-    {
-      id: 14,
-      image: "https://images.unsplash.com/photo-1593702295094-ac9a038d4f43?q=80&w=1374&auto=format=crop",
-      category: "Cortes",
-      title: "Corte Personalizado"
-    },
-    {
-      id: 15,
-      image: "https://images.unsplash.com/photo-1622296089863-4288be4a1970?q=80&w=1374&auto=format&fit=crop",
-      category: "Cortes",
-      title: "Cliente Satisfeito"
-    },
-    {
-      id: 16,
-      image: "https://images.unsplash.com/photo-1507114845806-0347f6150324?q=80&w=1374&auto=format&fit=crop",
-      category: "Ambiente",
-      title: "Experiência Premium"
+      title: "Espaço Premium",
+      alt: "Vista interna de barbearia premium com design sofisticado"
     }
   ];
 
@@ -125,25 +113,15 @@ const GalleryPage = () => {
   const filteredItems = activeCategory === "Todos" 
     ? galleryItems 
     : galleryItems.filter(item => item.category === activeCategory);
-  
-  // Updated Instagram feed images
-  const instagramImages = [
-    "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=1374&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1521119989659-a83eee488004?q=80&w=1374&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1567894340315-735d7c361db0?q=80&w=1374&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=1374&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1534297635766-a262cdcb8ee4?q=80&w=1374&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1585747733279-8f82c526b52b?q=80&w=1374&auto=format&fit=crop"
-  ];
-  
+
   return (
     <>
-      {/* Hero Section */}
+      {/* Hero Section com nova imagem dark */}
       <section className="relative pt-32 pb-20 bg-brand-gray">
-        <div className="absolute inset-0 z-0 bg-black/40"></div>
+        <div className="absolute inset-0 z-0 bg-black/60"></div>
         <div 
           className="absolute inset-0 z-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1596357395217-80de13130e92?q=80&w=1471&auto=format&fit=crop')" }} 
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1621605815971-fbc98d665033?q=80&w=2070')" }} 
         ></div>
         
         <div className="container-custom relative z-10">
@@ -159,8 +137,8 @@ const GalleryPage = () => {
         </div>
       </section>
 
-      {/* Gallery Section */}
-      <section className="section-padding bg-white">
+      {/* Gallery Section - Ajustado para visual mais dark */}
+      <section className="section-padding bg-brand-gray/5">
         <div className="container-custom">
           <SectionTitle 
             title="Nossa Galeria" 
@@ -168,7 +146,7 @@ const GalleryPage = () => {
             center
           />
           
-          {/* Filter Categories */}
+          {/* Filter Categories - Estilo ajustado */}
           <div className="flex justify-center flex-wrap gap-2 mb-12">
             {categories.map((category) => (
               <button
@@ -177,7 +155,7 @@ const GalleryPage = () => {
                 className={`px-6 py-2 rounded-full transition-all ${
                   activeCategory === category
                     ? "bg-brand-gold text-white"
-                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                    : "bg-black/5 text-gray-700 hover:bg-black/10"
                 }`}
               >
                 {category}
@@ -185,21 +163,21 @@ const GalleryPage = () => {
             ))}
           </div>
           
-          {/* Gallery Grid */}
+          {/* Gallery Grid - Visual aprimorado */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredItems.map((item) => (
               <div 
                 key={item.id} 
-                className="overflow-hidden rounded-lg group relative cursor-pointer"
+                className="overflow-hidden rounded-lg group relative cursor-pointer shadow-lg"
               >
                 <div className="aspect-square">
                   <img 
                     src={item.image} 
-                    alt={item.title}
+                    alt={item.alt}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div className="text-white">
                     <span className="text-brand-gold text-sm uppercase">{item.category}</span>
                     <h3 className="text-xl font-medium">{item.title}</h3>
@@ -263,25 +241,15 @@ const GalleryPage = () => {
           />
           
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 mt-12">
-            {instagramImages.map((image, i) => (
-              <a 
-                key={i}
-                href="https://instagram.com/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="aspect-square rounded-lg overflow-hidden group relative"
-              >
+            {/* Replace with Instagram feed */}
+            {[1, 2, 3, 4, 5, 6].map((item) => (
+              <div key={item} className="aspect-square rounded-lg overflow-hidden">
                 <img 
-                  src={image} 
-                  alt={`Post do Instagram ${i + 1}`}
+                  src="/placeholder.svg" 
+                  alt={`Post do Instagram ${item}`}
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-brand-gold/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 text-white">
-                    <path fillRule="evenodd" d="M1.5 6a2.25 2.25 0 012.25-2.25h16.5A2.25 2.25 0 0122.5 6v12a2.25 2.25 0 01-2.25 2.25H3.75A2.25 2.25 0 011.5 18V6zM3 16.06V18c0 .414.336.75.75.75h16.5A.75.75 0 0021 18v-1.94l-2.69-2.689a1.5 1.5 0 00-2.12 0l-.88.879.97.97a.75.75 0 11-1.06 1.06l-5.16-5.159a1.5 1.5 0 00-2.12 0L3 16.061zm10.125-7.81a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0z" clipRule="evenodd" />
-                  </svg>
-                </div>
-              </a>
+              </div>
             ))}
           </div>
           
