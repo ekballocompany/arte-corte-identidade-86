@@ -19,21 +19,21 @@ const HomePage = () => {
       {/* Hero Section */}
       <section className="relative min-h-screen bg-brand-gray flex items-center">
         <div className="absolute inset-0 z-0 bg-black/40"></div>
-        <div 
+        <div
           className="absolute inset-0 z-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/placeholder.svg')" }} 
+          style={{ backgroundImage: "url('/https://images.unsplash.com/photo-1695173122226-3a932002ab33?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')" }}
         ></div>
-        
+
         <div className="container-custom relative z-10 pt-20">
           <div className="max-w-xl">
-            <h5 className="text-brand-gold font-medium mb-4 tracking-widest animate-fade-in">Breno LADEIRA | VISAGISTA</h5>
-            <h1 className="heading-xl text-white mb-6 animate-fade-in" style={{animationDelay: "0.2s"}}>
+            <h5 className="text-brand-gold font-medium mb-4 tracking-widest animate-fade-in">GUSTAVO LADEIRA | VISAGISTA</h5>
+            <h1 className="heading-xl text-white mb-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
               Corte é arte.<br />Visagismo é identidade.
             </h1>
-            <p className="text-white/90 text-lg mb-8 animate-fade-in" style={{animationDelay: "0.4s"}}>
+            <p className="text-white/90 text-lg mb-8 animate-fade-in" style={{ animationDelay: "0.4s" }}>
               Especialista em visagismo masculino, transformando aparências e realçando personalidades através de cortes precisos e personalizados.
             </p>
-            <div className="flex flex-wrap gap-4 animate-fade-in" style={{animationDelay: "0.6s"}}>
+            <div className="flex flex-wrap gap-4 animate-fade-in" style={{ animationDelay: "0.6s" }}>
               <button onClick={handleBooking} className="btn-primary">
                 Agende seu horário
               </button>
@@ -43,8 +43,8 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-        
-        <div className="absolute bottom-10 left-0 right-0 flex justify-center animate-fade-in" style={{animationDelay: "1s"}}>
+
+        <div className="absolute bottom-10 left-0 right-0 flex justify-center animate-fade-in" style={{ animationDelay: "1s" }}>
           <div className="flex items-center text-white">
             <span className="mr-2 text-sm">Explore</span>
             <ArrowRight size={16} className="animate-bounce" />
@@ -57,8 +57,8 @@ const HomePage = () => {
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <SectionTitle 
-                title="Visagismo masculino de alto padrão" 
+              <SectionTitle
+                title="Visagismo masculino de alto padrão"
                 subtitle="Descubra o poder transformador de um corte personalizado para sua identidade visual"
               />
               <p className="text-gray-600 mb-6">
@@ -73,16 +73,16 @@ const HomePage = () => {
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div className="h-[300px] md:h-[400px] rounded-lg overflow-hidden">
-                <img 
-                  src="/placeholder.svg" 
-                  alt="Corte de cabelo estilizado" 
+                <img
+                  src="/placeholder.svg"
+                  alt="Corte de cabelo estilizado"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="h-[300px] md:h-[400px] rounded-lg overflow-hidden mt-8">
-                <img 
-                  src="/placeholder.svg" 
-                  alt="Homem com barba bem cuidada" 
+                <img
+                  src="/placeholder.svg"
+                  alt="Homem com barba bem cuidada"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -94,12 +94,12 @@ const HomePage = () => {
       {/* Services Preview */}
       <section className="section-padding bg-brand-beige/30">
         <div className="container-custom">
-          <SectionTitle 
-            title="Nossos Serviços" 
+          <SectionTitle
+            title="Nossos Serviços"
             subtitle="Experiências exclusivas para transformar sua aparência"
             center
           />
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
             {/* Service 1 */}
             <div className="bg-white p-8 rounded-lg shadow-md transition-transform hover:-translate-y-2">
@@ -114,7 +114,7 @@ const HomePage = () => {
                 Saiba mais <ArrowRight size={16} className="ml-1" />
               </Link>
             </div>
-            
+
             {/* Service 2 */}
             <div className="bg-white p-8 rounded-lg shadow-md transition-transform hover:-translate-y-2">
               <div className="bg-brand-gold/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
@@ -130,7 +130,7 @@ const HomePage = () => {
                 Saiba mais <ArrowRight size={16} className="ml-1" />
               </Link>
             </div>
-            
+
             {/* Service 3 */}
             <div className="bg-white p-8 rounded-lg shadow-md transition-transform hover:-translate-y-2">
               <div className="bg-brand-gold/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
@@ -147,7 +147,7 @@ const HomePage = () => {
               </Link>
             </div>
           </div>
-          
+
           <div className="text-center mt-12">
             <Link to="/servicos" className="btn-secondary">
               Ver todos os serviços
@@ -159,24 +159,24 @@ const HomePage = () => {
       {/* Gallery Preview */}
       <section className="section-padding bg-white">
         <div className="container-custom">
-          <SectionTitle 
-            title="Nossa Galeria" 
+          <SectionTitle
+            title="Nossa Galeria"
             subtitle="Conheça um pouco do nosso trabalho e resultados"
             center
           />
-          
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
             {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
               <div key={item} className="aspect-square overflow-hidden rounded-lg">
-                <img 
-                  src="/placeholder.svg" 
+                <img
+                  src="/placeholder.svg"
                   alt={`Trabalho de visagismo ${item}`}
                   className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
                 />
               </div>
             ))}
           </div>
-          
+
           <div className="text-center mt-12">
             <Link to="/galeria" className="btn-primary">
               Ver galeria completa
@@ -190,12 +190,12 @@ const HomePage = () => {
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <SectionTitle 
-                title="Nossa Localização" 
+              <SectionTitle
+                title="Nossa Localização"
                 subtitle="Venha nos visitar e transforme seu visual"
                 light
               />
-              
+
               <div className="space-y-6 mb-8">
                 <div className="flex items-start">
                   <MapPin size={24} className="text-brand-gold mr-3 mt-1 flex-shrink-0" />
@@ -207,7 +207,7 @@ const HomePage = () => {
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <Phone size={24} className="text-brand-gold mr-3 mt-1 flex-shrink-0" />
                   <div>
@@ -219,21 +219,21 @@ const HomePage = () => {
                   </div>
                 </div>
               </div>
-              
+
               <button onClick={handleBooking} className="btn-primary">
                 Agende pelo WhatsApp
               </button>
             </div>
-            
+
             <div className="h-[400px] rounded-lg overflow-hidden">
               {/* Replace with actual Google Maps embed */}
-              <iframe 
+              <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d467688.89495579266!2d-46.92450779726561!3d-23.681531499999988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sS%C3%A3o%20Paulo%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1714109349647!5m2!1spt-BR!2sbr"
-                width="100%" 
-                height="100%" 
-                style={{border: 0}} 
-                allowFullScreen 
-                loading="lazy" 
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Localização Gustavo Ladeira Visagista"
               ></iframe>
