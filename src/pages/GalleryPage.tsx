@@ -23,7 +23,7 @@ const GalleryPage = () => {
     // Cortes
     {
       id: 1,
-      image: "https://images.unsplash.com/photo-1622296089863-4288be4a1970?q=80&w=2070",
+      image: "https://images.unsplash.com/photo-1662123844664-7235ecbb4e53?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       category: "Cortes",
       title: "Corte Moderno Executivo",
       alt: "Homem recebendo corte de cabelo moderno em barbearia elegante com iluminação baixa"
@@ -81,7 +81,7 @@ const GalleryPage = () => {
     },
     {
       id: 9,
-      image: "https://images.unsplash.com/photo-1595654056673-464307ef2b61?q=80&w=2070",
+      image: "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       category: "Ambiente",
       title: "Estação de Trabalho",
       alt: "Estação de trabalho profissional com ferramentas tradicionais de barbearia"
@@ -95,7 +95,7 @@ const GalleryPage = () => {
     },
     {
       id: 11,
-      image: "https://images.unsplash.com/photo-1626725451206-050b623aaf00?q=80&w=2070",
+      image: "https://images.unsplash.com/photo-1705976063063-af7d6b9a4083?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       category: "Ambiente",
       title: "Detalhes Sofisticados",
       alt: "Detalhe de produtos e ferramentas profissionais de barbearia"
@@ -231,40 +231,31 @@ const GalleryPage = () => {
         </div>
       </section>
 
-      {/* Instagram Feed */}
-      <section className="section-padding bg-white">
-        <div className="container-custom">
-          <SectionTitle 
-            title="Siga-nos no Instagram" 
-            subtitle="Acompanhe nosso trabalho diário e novidades"
-            center
-          />
-          
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 mt-12">
-            {/* Replace with Instagram feed */}
-            {[1, 2, 3, 4, 5, 6].map((item) => (
-              <div key={item} className="aspect-square rounded-lg overflow-hidden">
-                <img 
-                  src="/placeholder.svg" 
-                  alt={`Post do Instagram ${item}`}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            ))}
-          </div>
-          
-          <div className="text-center mt-12">
-            <a 
-              href="https://instagram.com/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="btn-secondary"
-            >
-              Ver mais no Instagram
-            </a>
-          </div>
-        </div>
-      </section>
+{/* Instagram Feed */}
+<section className="section-padding bg-white">
+  <div className="container-custom">
+    <SectionTitle 
+      title="Siga-nos no Instagram" 
+      subtitle="Acompanhe nosso trabalho diário e novidades"
+      center
+    />
+
+    <div className="mt-12">
+      {/* LightWidget WIDGET */}
+      <div className="w-full overflow-hidden h-[250px] md:h-[800px]">
+        <iframe
+          src="//lightwidget.com/widgets/cf97a7099c7d5b22a7a05f04f665ce40.html"
+          scrolling="no"
+          allowTransparency="true"
+          className="w-full h-full border-0"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
     </>
   );
 };
