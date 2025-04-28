@@ -121,7 +121,7 @@ const GalleryPage = () => {
         <div className="absolute inset-0 z-0 bg-black/60"></div>
         <div 
           className="absolute inset-0 z-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1621605815971-fbc98d665033?q=80&w=2070')" }} 
+          style={{ backgroundImage: "fundo preto" }}
         ></div>
         
         <div className="container-custom relative z-10">
@@ -130,7 +130,7 @@ const GalleryPage = () => {
             <h1 className="heading-xl text-white mb-6">
               Nossa Experiência em Imagens
             </h1>
-            <p className="text-white/90 text-lg">
+            <p className="text-white/90 text-sm md:text-md">
               Conheça nosso trabalho através de uma seleção de fotos que demonstram a qualidade e precisão do nosso visagismo.
             </p>
           </div>
@@ -168,7 +168,7 @@ const GalleryPage = () => {
             {filteredItems.map((item) => (
               <div 
                 key={item.id} 
-                className="overflow-hidden rounded-lg group relative cursor-pointer shadow-lg"
+                className="overflow-hidden rounded-lg group relative shadow-lg"
               >
                 <div className="aspect-square">
                   <img 
@@ -230,31 +230,6 @@ const GalleryPage = () => {
           </div>
         </div>
       </section>
-
-{/* Instagram Feed */}
-<section className="section-padding bg-white">
-  <div className="container-custom">
-    <SectionTitle 
-      title="Siga-nos no Instagram" 
-      subtitle="Acompanhe nosso trabalho diário e novidades"
-      center
-    />
-
-    <div className="mt-12">
-      {/* LightWidget WIDGET */}
-      <div className="w-full overflow-hidden h-[250px] md:h-[800px]">
-        <iframe
-          src="//lightwidget.com/widgets/cf97a7099c7d5b22a7a05f04f665ce40.html"
-          scrolling="no"
-          allowTransparency="true"
-          className="w-full h-full border-0"
-        ></iframe>
-      </div>
-    </div>
-  </div>
-</section>
-
-
 
     </>
   );
