@@ -80,11 +80,12 @@ const ServicesPage = () => {
     <>
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-brand-gray">
-        <div className="absolute inset-0 z-0 bg-black/40"></div>
-        <div
-          className="absolute inset-0 z-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('Deixei a cor em preto / sem imagem mesmo" }}
+     {/* <div className="absolute inset-0 z-0 bg-black/40"></div> */}
+     <div 
+          className="absolute inset-0 z-0 bg-cover bg-center bg-brand-black"
+          // style={{ backgroundImage: "Deixei a cor em preto / sem imagem mesmo" }}
         ></div>
+        
 
         <div className="container-custom relative z-10">
           <div className="max-w-2xl mx-auto text-center">
