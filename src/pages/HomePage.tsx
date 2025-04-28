@@ -93,7 +93,7 @@ const HomePage = () => {
 
         <div className="container-custom relative z-10 pt-6 md:pt-20">
           <div className="max-w-xl">
-            <h5 className="text-brand-gold font-medium mb-4 tracking-widest animate-fade-in">GUSTAVO LADEIRA | VISAGISTA</h5>
+            {/* <h5 className="text-brand-gold font-medium mb-4 tracking-widest animate-fade-in">GUSTAVO LADEIRA | VISAGISTA</h5> */}
             <h1 className="heading-xl text-white mb-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
               Corte é arte.<br />Visagismo é identidade.
             </h1>
