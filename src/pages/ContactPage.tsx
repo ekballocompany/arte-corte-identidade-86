@@ -1,4 +1,3 @@
-
 import { useEffect, useState, FormEvent } from "react";
 import { toast } from "sonner";
 import SectionTitle from "../components/SectionTitle";
@@ -29,22 +28,45 @@ const ContactPage = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission - In a real project, this would be an API call
-    setTimeout(() => {
-      toast.success("Mensagem enviada com sucesso! Em breve entraremos em contato.", {
+    try {
+      const response = await fetch("https://formspree.io/f/mjkwkzdn", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message
+        }),
+      });
+
+      if (response.ok) {
+        toast.success("Mensagem enviada com sucesso! Em breve entraremos em contato.", {
+          duration: 5000,
+        });
+
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          message: ""
+        });
+      } else {
+        toast.error("Ocorreu um erro ao enviar sua mensagem. Tente novamente mais tarde.", {
+          duration: 5000,
+        });
+      }
+    } catch (error) {
+      toast.error("Erro de conexão. Verifique sua internet e tente novamente.", {
         duration: 5000,
       });
-      
-      // Reset form
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        message: ""
-      });
-      
+    } finally {
       setIsSubmitting(false);
-    }, 1500);
+    }
   };
 
   // Function to open WhatsApp
@@ -62,18 +84,16 @@ const ContactPage = () => {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-brand-gray">
         <div className="absolute inset-0 z-0 bg-black/40"></div>
-        <div 
+        <div
           className="absolute inset-0 z-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/placeholder.svg')" }} 
+          style={{ backgroundImage: "url('Deixei a cor em preto / sem imagem mesmo')" }}
         ></div>
-        
+
         <div className="container-custom relative z-10">
           <div className="max-w-2xl mx-auto text-center">
             <h5 className="text-brand-gold font-medium mb-4 tracking-widest">CONTATO</h5>
-            <h1 className="heading-xl text-white mb-6">
-              Fale Conosco
-            </h1>
-            <p className="text-white/90 text-lg">
+            <h1 className="heading-xl text-white mb-6">Fale Conosco</h1>
+            <p className="text-white/90 md:text-md text-sm">
               Estamos prontos para atendê-lo e responder todas as suas dúvidas.
             </p>
           </div>
@@ -86,11 +106,11 @@ const ContactPage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Info */}
             <div>
-              <SectionTitle 
-                title="Informações de Contato" 
+              <SectionTitle
+                title="Informações de Contato"
                 subtitle="Várias formas de entrar em contato conosco"
               />
-              
+
               <div className="space-y-8 mb-8">
                 <div className="flex items-start">
                   <div className="bg-brand-gold/10 p-4 rounded-full flex-shrink-0 mr-4">
@@ -104,43 +124,39 @@ const ContactPage = () => {
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="bg-brand-gold/10 p-4 rounded-full flex-shrink-0 mr-4">
                     <Phone className="text-brand-gold" size={24} />
                   </div>
                   <div>
                     <h4 className="text-xl font-medium mb-2">Telefone</h4>
-                    <p className="text-gray-600">
-                      (11) 99999-9999
-                    </p>
-                    <button 
-                      onClick={handleCall} 
+                    <p className="text-gray-600">(11) 99999-9999</p>
+                    <button
+                      onClick={handleCall}
                       className="text-brand-gold font-medium hover:underline mt-1 inline-flex items-center"
                     >
                       Ligar agora
                     </button>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="bg-brand-gold/10 p-4 rounded-full flex-shrink-0 mr-4">
                     <Mail className="text-brand-gold" size={24} />
                   </div>
                   <div>
                     <h4 className="text-xl font-medium mb-2">E-mail</h4>
-                    <p className="text-gray-600">
-                      gustavo@email.com
-                    </p>
-                    <a 
-                      href="mailto:gustavo@email.com" 
+                    <p className="text-gray-600">gustavo@email.com</p>
+                    <a
+                      href="mailto:gustavo@email.com"
                       className="text-brand-gold font-medium hover:underline mt-1 inline-flex items-center"
                     >
                       Enviar e-mail
                     </a>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="bg-brand-gold/10 p-4 rounded-full flex-shrink-0 mr-4">
                     <Clock className="text-brand-gold" size={24} />
@@ -164,24 +180,24 @@ const ContactPage = () => {
                   </div>
                 </div>
               </div>
-              
+
               <div className="mt-8">
-                <button 
-                  onClick={handleWhatsApp} 
+                <button
+                  onClick={handleWhatsApp}
                   className="btn-primary w-full md:w-auto"
                 >
                   Conversar pelo WhatsApp
                 </button>
               </div>
             </div>
-            
+
             {/* Contact Form */}
             <div>
-              <SectionTitle 
-                title="Envie uma Mensagem" 
+              <SectionTitle
+                title="Envie uma Mensagem"
                 subtitle="Preencha o formulário e entraremos em contato"
               />
-              
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
@@ -198,7 +214,7 @@ const ContactPage = () => {
                     placeholder="Digite seu nome completo"
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
                     E-mail *
@@ -214,7 +230,7 @@ const ContactPage = () => {
                     placeholder="Digite seu e-mail"
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
                     Telefone
@@ -229,7 +245,7 @@ const ContactPage = () => {
                     placeholder="Digite seu telefone"
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
                     Mensagem *
@@ -245,10 +261,10 @@ const ContactPage = () => {
                     placeholder="Digite sua mensagem"
                   ></textarea>
                 </div>
-                
+
                 <div>
-                  <button 
-                    type="submit" 
+                  <button
+                    type="submit"
                     disabled={isSubmitting}
                     className="btn-primary w-full"
                   >
@@ -263,13 +279,13 @@ const ContactPage = () => {
 
       {/* Map Section */}
       <section className="h-[500px] bg-gray-100">
-        <iframe 
+        <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d467688.89495579266!2d-46.92450779726561!3d-23.681531499999988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sS%C3%A3o%20Paulo%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1714109349647!5m2!1spt-BR!2sbr"
-          width="100%" 
-          height="100%" 
-          style={{border: 0}} 
-          allowFullScreen 
-          loading="lazy" 
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
           title="Localização Gustavo Ladeira Visagista"
         ></iframe>
