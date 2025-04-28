@@ -12,17 +12,17 @@ const AboutPage = () => {
   const handleBooking = () => {
     window.open("https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20agendar%20um%20horário", "_blank");
   };
-  
+
   return (
     <>
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-brand-gray">
         <div className="absolute inset-0 z-0 bg-black/40"></div>
-        <div 
+        <div
           className="absolute inset-0 z-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/placeholder.svg')" }} 
+          style={{ backgroundImage: "url('Deixei a cor em preto / sem imagem mesmo')" }}
         ></div>
-        
+
         <div className="container-custom relative z-10">
           <div className="max-w-2xl mx-auto text-center">
             <h5 className="text-brand-gold font-medium mb-4 tracking-widest">SOBRE</h5>
@@ -41,31 +41,31 @@ const AboutPage = () => {
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="h-[500px] rounded-lg overflow-hidden">
-              <img 
-                src="/placeholder.svg" 
+              <img
+                src="https://images.pexels.com/photos/7697671/pexels-photo-7697671.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 alt="Gustavo Ladeira"
                 className="w-full h-full object-cover"
               />
             </div>
-            
+
             <div>
-              <SectionTitle 
-                title="Gustavo Ladeira" 
+              <SectionTitle
+                title="Gustavo Ladeira"
                 subtitle="Visagista e especialista em cortes masculinos"
               />
-              
+
               <p className="text-gray-600 mb-6">
                 Com mais de 10 anos de experiência no universo da beleza masculina, Gustavo Ladeira construiu sua carreira focada na arte do visagismo. Sua jornada começou com uma formação tradicional em barbearia, mas logo se expandiu para uma abordagem mais sofisticada e personalizada.
               </p>
-              
+
               <p className="text-gray-600 mb-6">
                 Formado em visagismo pela renomada Academia Internacional de Estética, Gustavo também possui especializações em cortes europeus e técnicas avançadas de barba. Sua constante busca por aperfeiçoamento o levou a workshops e cursos internacionais, trazendo para seus clientes o que há de mais atual nas tendências mundiais.
               </p>
-              
+
               <p className="text-gray-600 mb-8">
                 "Cada rosto carrega uma história. O corte deve contá-la." Esta filosofia norteia todo o trabalho de Gustavo, que acredita que o visagismo vai muito além da estética – é uma forma de expressão da identidade e personalidade de cada homem.
               </p>
-              
+
               <button onClick={handleBooking} className="btn-primary">
                 Agendar horário
               </button>
@@ -80,24 +80,24 @@ const AboutPage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center lg:grid-flow-dense">
             <div className="lg:col-start-2">
               <div className="h-[400px] rounded-lg overflow-hidden">
-                <img 
-                  src="/placeholder.svg" 
+                <img
+                  src="https://images.pexels.com/photos/3992874/pexels-photo-3992874.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                   alt="Filosofia de trabalho"
                   className="w-full h-full object-cover"
                 />
               </div>
             </div>
-            
+
             <div className="lg:col-start-1">
-              <SectionTitle 
-                title="Nossa Filosofia" 
+              <SectionTitle
+                title="Nossa Filosofia"
                 subtitle="A abordagem que torna nosso trabalho único"
               />
-              
+
               <p className="text-gray-600 mb-6">
                 O visagismo é uma ciência e uma arte que estuda a relação entre as características físicas e a personalidade de uma pessoa, harmonizando-as através de técnicas específicas. No nosso trabalho, valorizamos:
               </p>
-              
+
               <div className="space-y-4 mb-8">
                 <div className="flex items-start">
                   <div className="w-10 h-10 rounded-full bg-brand-gold/20 flex items-center justify-center mr-4 mt-1">
@@ -108,7 +108,7 @@ const AboutPage = () => {
                     <p className="text-gray-600">Cada cliente recebe um atendimento exclusivo, com análise detalhada de suas características faciais e estilo pessoal.</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="w-10 h-10 rounded-full bg-brand-gold/20 flex items-center justify-center mr-4 mt-1">
                     <span className="text-brand-gold font-bold">2</span>
@@ -118,7 +118,7 @@ const AboutPage = () => {
                     <p className="text-gray-600">Utilizamos técnicas avançadas e ferramentas de alta qualidade para garantir cortes impecáveis e duradouros.</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="w-10 h-10 rounded-full bg-brand-gold/20 flex items-center justify-center mr-4 mt-1">
                     <span className="text-brand-gold font-bold">3</span>
@@ -129,7 +129,7 @@ const AboutPage = () => {
                   </div>
                 </div>
               </div>
-              
+
               <blockquote className="border-l-4 border-brand-gold pl-4 italic text-gray-700">
                 "O visagismo não é apenas sobre aparência, mas sobre revelar quem você realmente é através da sua imagem."
               </blockquote>
@@ -141,12 +141,12 @@ const AboutPage = () => {
       {/* Expertise */}
       <section className="section-padding bg-white">
         <div className="container-custom">
-          <SectionTitle 
-            title="Nossa Expertise" 
+          <SectionTitle
+            title="Nossa Expertise"
             subtitle="Áreas de especialização do nosso trabalho"
             center
           />
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             <div className="bg-white p-8 rounded-lg shadow-md border border-gray-100">
               <div className="bg-brand-gold/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
@@ -159,7 +159,7 @@ const AboutPage = () => {
                 Aplicamos técnicas avançadas de visagismo que consideram não apenas o formato do rosto, mas também a personalidade e estilo de vida do cliente.
               </p>
             </div>
-            
+
             <div className="bg-white p-8 rounded-lg shadow-md border border-gray-100">
               <div className="bg-brand-gold/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 text-brand-gold">
@@ -171,7 +171,7 @@ const AboutPage = () => {
                 Dominamos técnicas de corte e barba de diferentes partes do mundo, adaptando-as para atender às necessidades específicas dos clientes brasileiros.
               </p>
             </div>
-            
+
             <div className="bg-white p-8 rounded-lg shadow-md border border-gray-100">
               <div className="bg-brand-gold/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 text-brand-gold">
@@ -190,21 +190,21 @@ const AboutPage = () => {
       {/* Testimonials */}
       <section className="section-padding bg-brand-gray text-white">
         <div className="container-custom">
-          <SectionTitle 
-            title="O que nossos clientes dizem" 
+          <SectionTitle
+            title="O que nossos clientes dizem"
             subtitle="Experiências compartilhadas por quem confia no nosso trabalho"
             center
             light
           />
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             {[1, 2, 3].map((item) => (
               <div key={item} className="bg-white/5 backdrop-blur-sm p-8 rounded-lg border border-white/10">
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center">
                     <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
-                      <img 
-                        src="/placeholder.svg" 
+                      <img
+                        src="/placeholder.svg"
                         alt={`Cliente ${item}`}
                         className="w-full h-full object-cover"
                       />
@@ -220,11 +220,11 @@ const AboutPage = () => {
                     </svg>
                   </div>
                 </div>
-                
+
                 <p className="text-gray-300 mb-6">
                   "O trabalho do Gustavo vai muito além de um simples corte. Ele realmente entende como valorizar cada característica do rosto. Saio sempre com mais confiança e recebendo elogios."
                 </p>
-                
+
                 <div className="flex text-brand-gold">
                   {Array.from({ length: 5 }, (_, i) => (
                     <svg key={i} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">

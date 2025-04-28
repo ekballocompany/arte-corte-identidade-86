@@ -14,6 +14,69 @@ const HomePage = () => {
     window.open("https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20agendar%20um%20horário", "_blank");
   };
 
+  const galleryItems = [
+    // Cortes
+    {
+      id: 1,
+      image: "https://images.unsplash.com/photo-1605497788044-5a32c7078486?q=80&w=2074",
+      category: "Cortes",
+      title: "Corte Moderno Executivo",
+      alt: "Homem recebendo corte de cabelo moderno em barbearia elegante com iluminação baixa"
+    },
+    {
+      id: 2,
+      image: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?q=80&w=2070",
+      category: "Cortes",
+      title: "Acabamento Preciso",
+      alt: "Barbeiro realizando acabamento detalhado no corte masculino em ambiente escuro"
+    },
+    {
+      id: 3,
+      image: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?q=80&w=2070",
+      category: "Cortes",
+      title: "Técnica Apurada",
+      alt: "Barbeiro profissional usando técnicas precisas de corte em ambiente sofisticado"
+    },
+    {
+      id: 4,
+      image: "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=2074",
+      category: "Cortes",
+      title: "Estilo Clássico",
+      alt: "Cliente recebendo corte clássico em cadeira de barbeiro vintage"
+    },
+    // Barbas
+    {
+      id: 5,
+      image: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?q=80&w=2070",
+      category: "Barbas",
+      title: "Barba Bem Cuidada",
+      alt: "Detalhe de barba sendo aparada com precisão usando navalha tradicional"
+    },
+    {
+      id: 6,
+      image: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=2070",
+      category: "Barbas",
+      title: "Modelagem de Barba",
+      alt: "Processo de modelagem de barba com produtos especializados"
+    },
+    {
+      id: 7,
+      image: "https://images.unsplash.com/photo-1517832606299-7ae9b720a186?q=80&w=2076",
+      category: "Barbas",
+      title: "Barba Clássica",
+      alt: "Homem com barba bem aparada em ambiente de barbearia tradicional"
+    },
+    // Ambiente
+    {
+      id: 8,
+      image: "https://images.unsplash.com/photo-1521322714240-ee1d383eab62?q=80&w=2070",
+      category: "Ambiente",
+      title: "Ambiente Premium",
+      alt: "Interior elegante de barbearia com decoração vintage e iluminação suave"
+    }
+  ];
+
+
   return (
     <>
       {/* Hero Section */}
@@ -30,11 +93,11 @@ const HomePage = () => {
 
         <div className="container-custom relative z-10 pt-20">
           <div className="max-w-xl">
-            {/* <h5 className="text-brand-gold font-medium mb-4 tracking-widest animate-fade-in">GUSTAVO LADEIRA | VISAGISTA</h5> */}
+            <h5 className="text-brand-gold font-medium mb-4 tracking-widest animate-fade-in">GUSTAVO LADEIRA | VISAGISTA</h5>
             <h1 className="heading-xl text-white mb-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
               Corte é arte.<br />Visagismo é identidade.
             </h1>
-            <p className="text-white/90 mb-8 animate-fade-in md:text-lg text-sm" style={{ animationDelay: "0.4s" }}>
+            <p className="text-white/90 mb-8 animate-fade-in md:text-md text-sm" style={{ animationDelay: "0.4s" }}>
               Especialista em visagismo masculino, transformando aparências e realçando personalidades através de cortes precisos e personalizados.
             </p>
             <div className="flex flex-wrap gap-4 animate-fade-in" style={{ animationDelay: "0.6s" }}>
@@ -81,14 +144,14 @@ const HomePage = () => {
             <div className="grid grid-cols-2 gap-4">
               <div className="h-[300px] md:h-[400px] rounded-lg overflow-hidden">
                 <img
-                  src="/placeholder.svg"
+                  src="https://images.unsplash.com/photo-1643898803340-c27d92822088?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="Corte de cabelo estilizado"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="h-[300px] md:h-[400px] rounded-lg overflow-hidden mt-8">
                 <img
-                  src="/placeholder.svg"
+                  src="https://images.unsplash.com/photo-1593351918612-fdb3a20b36b6?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="Homem com barba bem cuidada"
                   className="w-full h-full object-cover"
                 />
@@ -173,16 +236,17 @@ const HomePage = () => {
           />
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
-              <div key={item} className="aspect-square overflow-hidden rounded-lg">
+            {galleryItems.map((item) => (
+              <div key={item.id} className="aspect-square overflow-hidden rounded-lg">
                 <img
-                  src="/placeholder.svg"
-                  alt={`Trabalho de visagismo ${item}`}
+                  src={item.image}
+                  alt={item.title}
                   className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
                 />
               </div>
             ))}
           </div>
+
 
           <div className="text-center mt-12">
             <Link to="/galeria" className="btn-primary">

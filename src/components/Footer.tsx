@@ -50,7 +50,7 @@ const Footer = () => {
 
           {/* Links */}
           <div>
-            <h4 className="font-serif text-lg font-semibold mb-4">Links Rápidos</h4>
+            <h4 className="font-serif text-lg font-semibold mb-4">Mapa do site</h4>
             <ul className="space-y-2">
               <li>
                 <Link to="/" className="text-sm text-gray-400 hover:text-brand-gold transition-colors">

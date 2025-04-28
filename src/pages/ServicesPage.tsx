@@ -25,7 +25,7 @@ const ServicesPage = () => {
         "Técnicas precisas de corte",
         "Acabamento impecável"
       ],
-      image: "/placeholder.svg",
+      image: "https://images.pexels.com/photos/3037244/pexels-photo-3037244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       duration: "45 minutos",
       price: "R$ 120,00"
     },
@@ -40,7 +40,7 @@ const ServicesPage = () => {
         "Hidratação com produtos premium",
         "Acabamento com navalha"
       ],
-      image: "/placeholder.svg",
+      image: "https://images.pexels.com/photos/5853394/pexels-photo-5853394.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       duration: "30 minutos",
       price: "R$ 80,00"
     },
@@ -55,7 +55,7 @@ const ServicesPage = () => {
         "Recomendação de produtos específicos",
         "Orientações de manutenção em casa"
       ],
-      image: "/placeholder.svg",
+      image: "https://images.pexels.com/photos/11403966/pexels-photo-11403966.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       duration: "1 hora e 30 minutos",
       price: "R$ 250,00"
     },
@@ -70,7 +70,7 @@ const ServicesPage = () => {
         "Hidratação completa",
         "Finalização premium"
       ],
-      image: "/placeholder.svg",
+      image: "https://images.pexels.com/photos/1319461/pexels-photo-1319461.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       duration: "1 hora e 15 minutos",
       price: "R$ 180,00"
     }
@@ -81,18 +81,18 @@ const ServicesPage = () => {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-brand-gray">
         <div className="absolute inset-0 z-0 bg-black/40"></div>
-        <div 
+        <div
           className="absolute inset-0 z-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/placeholder.svg')" }} 
+          style={{ backgroundImage: "url('Deixei a cor em preto / sem imagem mesmo" }}
         ></div>
-        
+
         <div className="container-custom relative z-10">
           <div className="max-w-2xl mx-auto text-center">
             <h5 className="text-brand-gold font-medium mb-4 tracking-widest">SERVIÇOS</h5>
             <h1 className="heading-xl text-white mb-6">
               Experiências exclusivas de visagismo
             </h1>
-            <p className="text-white/90 text-lg">
+            <p className="text-white/90 md:text-md text-sm">
               Descubra serviços personalizados que transformam sua aparência e revelam sua verdadeira identidade visual.
             </p>
           </div>
@@ -102,24 +102,23 @@ const ServicesPage = () => {
       {/* Services Section */}
       <section className="section-padding bg-white">
         <div className="container-custom">
-          <SectionTitle 
-            title="Nossos Serviços" 
+          <SectionTitle
+            title="Nossos Serviços"
             subtitle="Conheça as experiências exclusivas de visagismo desenvolvidas para valorizar sua identidade"
             center
           />
-          
+
           <div className="space-y-24 mt-16">
             {services.map((service, index) => (
-              <div 
-                key={service.id} 
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
-                  index % 2 !== 0 ? "lg:grid-flow-dense" : ""
-                }`}
+              <div
+                key={service.id}
+                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 !== 0 ? "lg:grid-flow-dense" : ""
+                  }`}
               >
                 <div className={index % 2 !== 0 ? "lg:col-start-2" : ""}>
                   <h3 className="heading-lg mb-4">{service.title}</h3>
                   <p className="text-gray-600 mb-6">{service.description}</p>
-                  
+
                   <div className="space-y-3 mb-8">
                     {service.details.map((detail, i) => (
                       <div key={i} className="flex items-center">
@@ -128,7 +127,7 @@ const ServicesPage = () => {
                       </div>
                     ))}
                   </div>
-                  
+
                   <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-8">
                     <div className="bg-brand-beige/30 px-4 py-2 rounded-md">
                       <span className="text-sm text-gray-600">Duração</span>
@@ -139,17 +138,16 @@ const ServicesPage = () => {
                       <p className="font-medium">{service.price}</p>
                     </div>
                   </div>
-                  
+
                   <button onClick={handleBooking} className="btn-primary">
                     Agendar este serviço
                   </button>
                 </div>
-                
-                <div className={`h-[400px] rounded-lg overflow-hidden ${
-                  index % 2 !== 0 ? "lg:col-start-1" : ""
-                }`}>
-                  <img 
-                    src={service.image} 
+
+                <div className={`h-[400px] rounded-lg overflow-hidden ${index % 2 !== 0 ? "lg:col-start-1" : ""
+                  }`}>
+                  <img
+                    src={service.image}
                     alt={service.title}
                     className="w-full h-full object-cover"
                   />
