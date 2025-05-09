@@ -84,11 +84,11 @@ const HomePage = () => {
         <div className="absolute inset-0 z-0 bg-black/40"></div>
         <div
           className="absolute inset-0 z-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('image-background-home.avif')" }}
+          style={{ backgroundImage: `url('${import.meta.env.BASE_URL}image-background-home.avif')` }}
         ></div>
         <div
           className="absolute inset-0 z-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('gradient-background-home.png')" }}
+          style={{ backgroundImage: `url('${import.meta.env.BASE_URL}gradient-background-home.png')` }}
         ></div>
 
         <div className="container-custom relative z-10 pt-6 md:pt-20">
