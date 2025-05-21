@@ -6,8 +6,8 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  // Configurando o base path para o repositório do GitHub Pages
-  base: mode === 'production' ? '/arte-corte-identidade-86/' : '/',
+  // Configurando o base path como raiz para o Lovable
+  base: '/',
   server: {
     host: "::",
     port: 8080,
