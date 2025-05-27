@@ -6,8 +6,8 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  // Base path configurado corretamente - usar '/' para Lovable, '/arte-corte-identidade-86/' para GitHub Pages
-  base: mode === 'development' ? '/' : '/',
+  // Base path para GitHub Pages - sempre usar o caminho da subpasta
+  base: '/arte-corte-identidade-86/',
   server: {
     host: "::",
     port: 8080,
@@ -30,6 +30,10 @@ export default defineConfig(({ mode }) => ({
     rollupOptions: {
       output: {
         manualChunks: undefined,
+        // Garantir que os chunks tenham nomes consistentes
+        entryFileNames: 'assets/[name]-[hash].js',
+        chunkFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]'
       },
     },
   },
