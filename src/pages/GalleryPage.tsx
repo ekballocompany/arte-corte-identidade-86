@@ -15,7 +15,7 @@ const GalleryPage = () => {
   }, []);
 
   // Gallery categories
-  const categories = ["Todos", "Cortes", "Barbas", "Ambiente"];
+  const categories = ["Todos", "Cortes", "Barbas", "Ambiente", "Brutus Exclusive", "Brutus Visagismo",  "Brutus Estética"];
   const [activeCategory, setActiveCategory] = useState("Todos");
 
   // Updated gallery items with carefully selected dark theme images
@@ -24,89 +24,113 @@ const GalleryPage = () => {
     {
       id: 1,
       image: "https://images.unsplash.com/photo-1662123844664-7235ecbb4e53?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      category: "Cortes",
-      title: "Corte Moderno Executivo",
-      alt: "Homem recebendo corte de cabelo moderno em barbearia elegante com iluminação baixa"
+      category: "Cortes"
     },
     {
       id: 2,
       image: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?q=80&w=2070",
-      category: "Cortes",
-      title: "Acabamento Preciso",
-      alt: "Barbeiro realizando acabamento detalhado no corte masculino em ambiente escuro"
+      category: "Cortes"
     },
     {
       id: 3,
       image: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?q=80&w=2070",
-      category: "Cortes",
-      title: "Técnica Apurada",
-      alt: "Barbeiro profissional usando técnicas precisas de corte em ambiente sofisticado"
+      category: "Cortes"
     },
     {
       id: 4,
       image: "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=2074",
-      category: "Cortes",
-      title: "Estilo Clássico",
-      alt: "Cliente recebendo corte clássico em cadeira de barbeiro vintage"
+      category: "Cortes"
     },
     // Barbas
     {
       id: 5,
       image: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?q=80&w=2070",
-      category: "Barbas",
-      title: "Barba Bem Cuidada",
-      alt: "Detalhe de barba sendo aparada com precisão usando navalha tradicional"
+      category: "Barbas"
     },
     {
       id: 6,
       image: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=2070",
-      category: "Barbas",
-      title: "Modelagem de Barba",
-      alt: "Processo de modelagem de barba com produtos especializados"
+      category: "Barbas"
     },
     {
       id: 7,
       image: "https://images.unsplash.com/photo-1517832606299-7ae9b720a186?q=80&w=2076",
-      category: "Barbas",
-      title: "Barba Clássica",
-      alt: "Homem com barba bem aparada em ambiente de barbearia tradicional"
+      category: "Barbas"
     },
     // Ambiente
     {
       id: 8,
       image: "https://images.unsplash.com/photo-1521322714240-ee1d383eab62?q=80&w=2070",
-      category: "Ambiente",
-      title: "Ambiente Premium",
-      alt: "Interior elegante de barbearia com decoração vintage e iluminação suave"
+      category: "Ambiente"
     },
     {
       id: 9,
       image: "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      category: "Ambiente",
-      title: "Estação de Trabalho",
-      alt: "Estação de trabalho profissional com ferramentas tradicionais de barbearia"
+      category: "Ambiente"
     },
     {
       id: 10,
       image: "https://images.unsplash.com/photo-1605497788044-5a32c7078486?q=80&w=2074",
-      category: "Ambiente",
-      title: "Tradição e Modernidade",
-      alt: "Ambiente que mescla elementos tradicionais e modernos de barbearia"
+      category: "Ambiente"
     },
     {
       id: 11,
       image: "https://images.unsplash.com/photo-1705976063063-af7d6b9a4083?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      category: "Ambiente",
-      title: "Detalhes Sofisticados",
-      alt: "Detalhe de produtos e ferramentas profissionais de barbearia"
+      category: "Ambiente"
     },
     {
       id: 12,
       image: "https://images.unsplash.com/photo-1512690459411-b9245aed614b?q=80&w=2070",
-      category: "Ambiente",
-      title: "Espaço Premium",
-      alt: "Vista interna de barbearia premium com design sofisticado"
-    }
+      category: "Ambiente"
+    },
+    // Brutus Estética
+    {
+      id: 13,
+      image: "https://images.unsplash.com/photo-1512690459411-b9245aed614b?q=80&w=2070",
+      category: "Brutus Estética"
+    },
+    {
+      id: 14,
+      image: "https://images.unsplash.com/photo-1512690459411-b9245aed614b?q=80&w=2070",
+      category: "Brutus Estética"
+    },
+    {
+      id: 15,
+      image: "https://images.unsplash.com/photo-1512690459411-b9245aed614b?q=80&w=2070",
+      category: "Brutus Estética"
+    },
+    // Brutus Exclusive
+    {
+      id: 13,
+      image: "https://images.unsplash.com/photo-1512690459411-b9245aed614b?q=80&w=2070",
+      category: "Brutus Exclusive"
+    },
+    {
+      id: 14,
+      image: "https://images.unsplash.com/photo-1512690459411-b9245aed614b?q=80&w=2070",
+      category: "Brutus Exclusive"
+    },
+    {
+      id: 15,
+      image: "https://images.unsplash.com/photo-1512690459411-b9245aed614b?q=80&w=2070",
+      category: "Brutus Exclusive"
+    },
+    // Brutus Visagismo
+    {
+      id: 13,
+      image: "https://images.unsplash.com/photo-1512690459411-b9245aed614b?q=80&w=2070",
+      category: "Brutus Visagismo"
+    },
+    {
+      id: 14,
+      image: "https://images.unsplash.com/photo-1512690459411-b9245aed614b?q=80&w=2070",
+      category: "Brutus Visagismo"
+    },
+    {
+      id: 15,
+      image: "https://images.unsplash.com/photo-1512690459411-b9245aed614b?q=80&w=2070",
+      category: "Brutus Visagismo"
+    },
   ];
 
   // Filtered items based on active category
@@ -172,14 +196,12 @@ const GalleryPage = () => {
                 <div className="aspect-square">
                   <img
                     src={item.image}
-                    alt={item.alt}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div className="text-white">
                     <span className="text-brand-gold text-sm uppercase">{item.category}</span>
-                    <h3 className="text-xl font-medium">{item.title}</h3>
                   </div>
                 </div>
               </div>

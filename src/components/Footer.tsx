@@ -7,7 +7,7 @@ const Footer = () => {
 
   // Function to open WhatsApp
   const openWhatsApp = () => {
-    window.open("https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20mais%20informações", "_blank");
+    window.open("https://wa.me/5516992832380?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20servi%C3%A7o!%20", "_blank");
   };
 
   return (
@@ -17,18 +17,18 @@ const Footer = () => {
           {/* Logo and About */}
           <div className="space-y-4">
             <div className="flex items-center">
-              <Scissors className="h-5 w-5 text-brand-gold rotate-45 mr-2" />
-              <div className="flex flex-col">
-                <span className="font-serif text-lg font-semibold">Brutus Barbearia</span>
-                {/* <span className="text-xs text-brand-gold tracking-wider">VISAGISTA</span> */}
-              </div>
+              {/* Logo */}
+              <div
+                className="w-16 h-16 bg-contain bg-no-repeat bg-center text-brand-gold mr-2 quality-90"
+                style={{ fontSize: '16px', backgroundImage: `url('${import.meta.env.BASE_URL}logo_brutus2.png')` }}
+              ></div>
             </div>
             <p className="text-sm text-gray-400 mt-4">
               Mais que uma barbearia: somos uma experiência de bem-estar, estilo e confiança para o homem moderno — com ética, respeito e excelência em cada detalhe.
             </p>
             <div className="flex space-x-4 pt-2">
               <a
-                href="https://instagram.com/"
+                href="https://www.instagram.com/brutusbarbeariarp/"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Instagram"
@@ -37,7 +37,7 @@ const Footer = () => {
                 <Instagram size={20} />
               </a>
               <a
-                href="https://facebook.com/"
+                href="https://www.facebook.com/BrutusBarbeariaRP/"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Facebook"
@@ -86,15 +86,15 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin size={18} className="text-brand-gold mr-2 mt-1 flex-shrink-0" />
-                <span className="text-sm text-gray-400">Rua Exemplo, 123 - Bairro, São Paulo - SP</span>
+                <span className="text-sm text-gray-400">R. Cel. Luíz da Silva Batista, 316 - Jd Irajá, Ribeirão Preto - SP</span>
               </li>
               <li className="flex items-center">
                 <Phone size={18} className="text-brand-gold mr-2 flex-shrink-0" />
-                <span className="text-sm text-gray-400">(11) 99999-9999</span>
+                <span className="text-sm text-gray-400">(16) 99283-2380</span>
               </li>
               <li className="flex items-center">
                 <Mail size={18} className="text-brand-gold mr-2 flex-shrink-0" />
-                <span className="text-sm text-gray-400">Brutus Barbearia@email.com</span>
+                <span className="text-sm text-gray-400">brutusbarbeariarp@gmail.com</span>
               </li>
             </ul>
           </div>
@@ -105,11 +105,11 @@ const Footer = () => {
             <ul className="space-y-2">
               <li className="text-sm text-gray-400 flex justify-between">
                 <span>Segunda - Sexta:</span>
-                <span>09:00 - 19:00</span>
+                <span>09:00 - 20:00</span>
               </li>
               <li className="text-sm text-gray-400 flex justify-between">
                 <span>Sábado:</span>
-                <span>09:00 - 18:00</span>
+                <span>08:30 - 18:00</span>
               </li>
               <li className="text-sm text-gray-400 flex justify-between">
                 <span>Domingo:</span>

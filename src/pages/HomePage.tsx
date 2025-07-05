@@ -2,7 +2,8 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import SectionTitle from "../components/SectionTitle";
-import { ArrowDown, ArrowRight, MapPin, Phone, Scissors } from "lucide-react";
+import { ArrowDown, ArrowRight, MapPin, Phone, Scissors, Crown, Eye, Sparkles } from "lucide-react";
+
 
 const HomePage = () => {
   useEffect(() => {
@@ -11,7 +12,7 @@ const HomePage = () => {
 
   // Function to open WhatsApp
   const handleBooking = () => {
-    window.open("https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20agendar%20um%20horário", "_blank");
+    window.open("https://wa.me/5516992832380?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20servi%C3%A7o!%20", "_blank");
   };
 
   const galleryItems = [
@@ -87,8 +88,20 @@ const HomePage = () => {
           style={{ backgroundImage: `url('${import.meta.env.BASE_URL}homepage.jpeg')` }}
         ></div> */}
 
+        {/* Mobile - visível só até md (menor que 768px) */}
         <div
-          className="absolute w-full min-h-150 md:h-screen"
+          className="absolute w-full min-h-[100svh] md:hidden"
+          style={{
+            backgroundImage: `url('${import.meta.env.BASE_URL}homepage-mobile.png')`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        ></div>
+
+        {/* Desktop - visível só a partir de md (768px pra cima) */}
+        <div
+          className="absolute w-full min-h-[100svh] hidden md:block md:h-screen"
           style={{
             backgroundImage: `url('${import.meta.env.BASE_URL}homepage.png')`,
             backgroundSize: "cover",
@@ -97,10 +110,12 @@ const HomePage = () => {
           }}
         ></div>
 
+        {/* O gradiente continua igual, se quiser também pode fazer responsivo */}
         <div
           className="absolute inset-0 z-0 bg-cover bg-center"
           style={{ backgroundImage: `url('${import.meta.env.BASE_URL}gradient-background-home.png')` }}
         ></div>
+
 
         <div className="container-custom relative z-10 pt-6 md:pt-20">
           <div className="max-w-xl">
@@ -181,53 +196,72 @@ const HomePage = () => {
             center
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-12">
             {/* Service 1 */}
-            <div className="bg-white p-8 rounded-lg shadow-md transition-transform hover:-translate-y-2">
-              <div className="bg-brand-gold/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                <Scissors className="text-brand-gold" size={24} />
+            <div className="bg-white p-8 rounded-lg shadow-md transition-transform hover:-translate-y-2 flex flex-col justify-between">
+              <div>
+                <div className="bg-brand-gold/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                  <Scissors className="text-brand-gold" size={24} />
+                </div>
+                <h3 className="heading-sm mb-4">Brutus Barbearia Convencional</h3>
+                <p className="text-gray-600 mb-6">
+                  Serviços clássicos de barbearia com excelência e atendimento personalizado.
+                </p>
               </div>
-              <h3 className="heading-sm mb-4">Corte Visagista</h3>
-              <p className="text-gray-600 mb-6">
-                Análise completa do formato de rosto e estilo pessoal para criar um corte único que valorize suas características.
-              </p>
-              <Link to="/servicos" className="text-brand-gold font-medium inline-flex items-center hover:underline">
+              <Link to="/servicos" className="text-brand-gold font-medium inline-flex items-center hover:underline mt-auto">
                 Saiba mais <ArrowRight size={16} className="ml-1" />
               </Link>
             </div>
 
             {/* Service 2 */}
-            <div className="bg-white p-8 rounded-lg shadow-md transition-transform hover:-translate-y-2">
-              <div className="bg-brand-gold/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-brand-gold">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-                </svg>
+            <div className="bg-white p-8 rounded-lg shadow-md transition-transform hover:-translate-y-2 flex flex-col justify-between">
+              <div>
+                <div className="bg-brand-gold/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                  <Crown className="text-brand-gold" size={24} />
+                </div>
+                <h3 className="heading-sm mb-4">Brutus Exclusive</h3>
+                <p className="text-gray-600 mb-6">
+                  Atendimento premium e serviços exclusivos para clientes que buscam o máximo em cuidado e estilo.
+                </p>
               </div>
-              <h3 className="heading-sm mb-4">Barba Designer</h3>
-              <p className="text-gray-600 mb-6">
-                Modelagem precisa da barba, alinhada com suas feições faciais para uma harmonia visual completa.
-              </p>
-              <Link to="/servicos" className="text-brand-gold font-medium inline-flex items-center hover:underline">
+              <Link to="/servicos" className="text-brand-gold font-medium inline-flex items-center hover:underline mt-auto">
                 Saiba mais <ArrowRight size={16} className="ml-1" />
               </Link>
             </div>
 
             {/* Service 3 */}
-            <div className="bg-white p-8 rounded-lg shadow-md transition-transform hover:-translate-y-2">
-              <div className="bg-brand-gold/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-brand-gold">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                </svg>
+            <div className="bg-white p-8 rounded-lg shadow-md transition-transform hover:-translate-y-2 flex flex-col justify-between">
+              <div>
+                <div className="bg-brand-gold/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                  <Eye className="text-brand-gold" size={24} />
+                </div>
+                <h3 className="heading-sm mb-4">Brutus Visagismos</h3>
+                <p className="text-gray-600 mb-6">
+                  Análise personalizada do seu estilo e formato para cortes e visuais que realçam sua identidade.
+                </p>
               </div>
-              <h3 className="heading-sm mb-4">Consultoria de Imagem</h3>
-              <p className="text-gray-600 mb-6">
-                Recomendação de corte e estilo completo, incluindo dicas de produtos e manutenção para seu tipo específico.
-              </p>
-              <Link to="/servicos" className="text-brand-gold font-medium inline-flex items-center hover:underline">
+              <Link to="/servicos" className="text-brand-gold font-medium inline-flex items-center hover:underline mt-auto">
+                Saiba mais <ArrowRight size={16} className="ml-1" />
+              </Link>
+            </div>
+
+            {/* Service 4 */}
+            <div className="bg-white p-8 rounded-lg shadow-md transition-transform hover:-translate-y-2 flex flex-col justify-between">
+              <div>
+                <div className="bg-brand-gold/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                  <Sparkles className="text-brand-gold" size={24} />
+                </div>
+                <h3 className="heading-sm mb-4">Brutus Estética</h3>
+                <p className="text-gray-600 mb-6">
+                  Serviços de estética para complementar seu visual com cuidados modernos e especializados.
+                </p>
+              </div>
+              <Link to="/servicos" className="text-brand-gold font-medium inline-flex items-center hover:underline mt-auto">
                 Saiba mais <ArrowRight size={16} className="ml-1" />
               </Link>
             </div>
           </div>
+
 
           <div className="text-center mt-12">
             <Link to="/servicos" className="btn-secondary">
@@ -284,8 +318,7 @@ const HomePage = () => {
                   <div>
                     <h4 className="text-xl font-medium mb-1">Endereço</h4>
                     <p className="text-gray-300">
-                      Rua Exemplo, 123 - Bairro<br />
-                      São Paulo - SP, 00000-000
+                      R. Cel. Luíz da Silva Batista, 316 - Jd Irajá,<br />Ribeirão Preto - SP
                     </p>
                   </div>
                 </div>
@@ -295,8 +328,8 @@ const HomePage = () => {
                   <div>
                     <h4 className="text-xl font-medium mb-1">Contato</h4>
                     <p className="text-gray-300">
-                      (11) 99999-9999<br />
-                      gustavo@email.com
+                      (16) 99283-2380<br />
+                      brutusbarbeariarp@gmail.com
                     </p>
                   </div>
                 </div>
@@ -310,7 +343,7 @@ const HomePage = () => {
             <div className="h-[400px] rounded-lg overflow-hidden">
               {/* Replace with actual Google Maps embed */}
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d467688.89495579266!2d-46.92450779726561!3d-23.681531499999988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sS%C3%A3o%20Paulo%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1714109349647!5m2!1spt-BR!2sbr"
+                src="https://www.google.com/maps?q=R.+Cel.+Lu%C3%ADz+da+Silva+Batista,+316,+Jardim+Iraj%C3%A1,+Ribeir%C3%A3o+Preto+SP&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

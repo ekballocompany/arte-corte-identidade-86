@@ -40,7 +40,7 @@ const Navbar = () => {
 
   // WhatsApp booking function
   const handleBooking = () => {
-    window.open("https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20agendar%20um%20horário", "_blank");
+    window.open("https://wa.me/5516992832380?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20servi%C3%A7o!%20", "_blank");
   };
 
   return (
@@ -52,7 +52,7 @@ const Navbar = () => {
         <Link to="/" className="flex items-center">
           {/* Logo */}
           <div
-            className="w-10 h-10 bg-contain bg-no-repeat bg-center text-brand-gold mr-2 quality-90"
+            className="w-16 h-16 bg-contain bg-no-repeat bg-center text-brand-gold mr-2 quality-90"
             style={{ fontSize:'16px', backgroundImage: `url('${import.meta.env.BASE_URL}logo_brutus2.png')` }}
           ></div>
 
