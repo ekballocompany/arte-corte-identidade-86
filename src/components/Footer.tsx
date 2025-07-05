@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  
+
   // Function to open WhatsApp
   const openWhatsApp = () => {
     window.open("https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20mais%20informações", "_blank");
@@ -19,12 +19,12 @@ const Footer = () => {
             <div className="flex items-center">
               <Scissors className="h-5 w-5 text-brand-gold rotate-45 mr-2" />
               <div className="flex flex-col">
-                <span className="font-serif text-lg font-semibold">Gustavo Ladeira</span>
-                <span className="text-xs text-brand-gold tracking-wider">VISAGISTA</span>
+                <span className="font-serif text-lg font-semibold">Brutus Barbearia</span>
+                {/* <span className="text-xs text-brand-gold tracking-wider">VISAGISTA</span> */}
               </div>
             </div>
             <p className="text-sm text-gray-400 mt-4">
-              Especialista em visagismo masculino, transformando aparências e realçando personalidades através de cortes precisos e personalizados.
+              Mais que uma barbearia: somos uma experiência de bem-estar, estilo e confiança para o homem moderno — com ética, respeito e excelência em cada detalhe.
             </p>
             <div className="flex space-x-4 pt-2">
               <a
@@ -94,7 +94,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <Mail size={18} className="text-brand-gold mr-2 flex-shrink-0" />
-                <span className="text-sm text-gray-400">gustavo@email.com</span>
+                <span className="text-sm text-gray-400">Brutus Barbearia@email.com</span>
               </li>
             </ul>
           </div>
@@ -126,7 +126,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-12 pt-8 border-t border-gray-800 text-center text-sm text-gray-500">
-          <p>© {currentYear} Gustavo Ladeira. Todos os direitos reservados.</p>
+          <p>© {currentYear} Brutus Barbearia. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>

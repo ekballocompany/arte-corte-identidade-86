@@ -82,10 +82,21 @@ const HomePage = () => {
       {/* Hero Section */}
       <section className="relative min-h-screen bg-brand-gray flex items-center">
         <div className="absolute inset-0 z-0 bg-black/40"></div>
+        {/* <div
+          className="absolute inset-0 z-0 object-cover object-center"
+          style={{ backgroundImage: `url('${import.meta.env.BASE_URL}homepage.jpeg')` }}
+        ></div> */}
+
         <div
-          className="absolute inset-0 z-0 bg-cover bg-center"
-          style={{ backgroundImage: `url('${import.meta.env.BASE_URL}image-background-home.avif')` }}
+          className="absolute w-full min-h-150 md:h-screen"
+          style={{
+            backgroundImage: `url('${import.meta.env.BASE_URL}homepage.png')`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
         ></div>
+
         <div
           className="absolute inset-0 z-0 bg-cover bg-center"
           style={{ backgroundImage: `url('${import.meta.env.BASE_URL}gradient-background-home.png')` }}
@@ -95,10 +106,10 @@ const HomePage = () => {
           <div className="max-w-xl">
             {/* <h5 className="text-brand-gold font-medium mb-4 tracking-widest animate-fade-in">GUSTAVO LADEIRA | VISAGISTA</h5> */}
             <h1 className="heading-xl text-white mb-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-              Corte é arte.<br />Visagismo é identidade.
+              Bem vindos<br />a  Brutus Barbearia.
             </h1>
             <p className="text-white/90 mb-8 animate-fade-in md:text-md text-sm" style={{ animationDelay: "0.4s" }}>
-              Especialista em visagismo masculino, transformando aparências e realçando personalidades através de cortes precisos e personalizados.
+              Mais que uma barbearia: somos uma experiência de bem-estar, estilo e confiança para o homem moderno — com ética, respeito e excelência em cada detalhe.
             </p>
             <div className="flex flex-wrap gap-4 animate-fade-in" style={{ animationDelay: "0.6s" }}>
               <button onClick={handleBooking} className="btn-primary">
@@ -128,14 +139,14 @@ const HomePage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <SectionTitle
-                title="Visagismo masculino de alto padrão"
-                subtitle="Descubra o poder transformador de um corte personalizado para sua identidade visual"
+                title="Brutus Barbearia — Excelência em visagismo e em estética"
+                subtitle="Mais do que uma barbearia, a Brutusé um espaço de transformação. Aqui, cada corte, cada linha e cada detalhe são pensados para revelar o melhor da sua imagem pessoal."
               />
               <p className="text-gray-600 mb-6">
-                Cada rosto carrega uma história única, e o visagismo é a arte de contar essa história da melhor forma possível. Com técnicas refinadas e um olhar apurado para detalhes, Gustavo Ladeira oferece cortes que vão além da estética - são afirmações de personalidade.
+                Entendemos que o visual ideal vai além da aparência: ele comunica quem você é. Por isso, unimos técnicas avançadas de visagismo, atendimento exclusivo e um ambiente de alto padrão para proporcionar uma experiência única — feita sob medida para cada cliente.
               </p>
               <p className="text-gray-600 mb-8">
-                Com formação especializada e anos de experiência, Gustavo traz para cada cliente uma abordagem personalizada, onde cada detalhe é pensado para realçar os pontos fortes e criar uma harmonia visual única.
+                Com uma equipe altamente qualificada e estrutura de primeira linha, oferecemos muito mais que serviços. Oferecemos identidade, estilo e presença. Seja para um momento especial ou para o seu dia a dia, a Brutus Barbearia é o lugar onde sua imagem fala por você.
               </p>
               <Link to="/sobre" className="btn-primary">
                 Conheça mais <ArrowRight size={16} className="ml-2" />
@@ -144,14 +155,14 @@ const HomePage = () => {
             <div className="grid grid-cols-2 gap-4">
               <div className="h-[300px] md:h-[400px] rounded-lg overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1643898803340-c27d92822088?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  src="HomePageImg1.jpeg"
                   alt="Corte de cabelo estilizado"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="h-[300px] md:h-[400px] rounded-lg overflow-hidden mt-8">
                 <img
-                  src="https://images.unsplash.com/photo-1593351918612-fdb3a20b36b6?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  src="HomePageImg2.jpeg"
                   alt="Homem com barba bem cuidada"
                   className="w-full h-full object-cover"
                 />

@@ -17,21 +17,24 @@ const AboutPage = () => {
     <>
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-brand-gray">
-     {/* <div className="absolute inset-0 z-0 bg-black/40"></div> */}
-     <div 
+        {/* <div className="absolute inset-0 z-0 bg-black/40"></div> */}
+        <div
           className="absolute inset-0 z-0 bg-cover bg-center bg-brand-black"
-          // style={{ backgroundImage: "Deixei a cor em preto / sem imagem mesmo" }}
+        // style={{ backgroundImage: "Deixei a cor em preto / sem imagem mesmo" }}
         ></div>
-        
+
 
         <div className="container-custom relative z-10">
           <div className="max-w-2xl mx-auto text-center">
             <h5 className="text-brand-gold font-medium mb-4 tracking-widest">SOBRE</h5>
+            <h1 className="heading-xl text-white">
+              Conheça a
+            </h1>
             <h1 className="heading-xl text-white mb-6">
-              Conheça Gustavo Ladeira
+              Brutus Barbearia
             </h1>
             <p className="text-white/90 text-sm md:text-md">
-              A história e filosofia por trás do nosso trabalho com visagismo masculino.
+              A história e a filosofia por trás do nosso trabalho.
             </p>
           </div>
         </div>
@@ -242,9 +245,9 @@ const AboutPage = () => {
       {/* CTA */}
       <section className="py-20 bg-white">
         <div className="container-custom text-center">
-          <h2 className="heading-lg mb-6">Pronto para conhecer o poder do visagismo?</h2>
+          <h2 className="heading-lg mb-6">Pronto para conhecer a Brutus Barbearia?</h2>
           <p className="text-gray-600 max-w-2xl mx-auto mb-8">
-            Agende seu horário com Gustavo Ladeira e descubra como o visagismo pode transformar sua aparência e destacar sua personalidade.
+            Agende seu horário na Brutus Barbearia e descubra o poder de um atendimento que transforma sua aparência, valoriza seu estilo e realça sua personalidade.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <button onClick={handleBooking} className="btn-primary">

@@ -44,20 +44,25 @@ const Navbar = () => {
   };
 
   return (
-    <nav 
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-brand-black py-3 shadow-lg" : "bg-transparent py-5"
-      }`}
+    <nav
+      className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? "bg-brand-black py-3 shadow-lg" : "bg-transparent py-5"
+        }`}
     >
       <div className="container-custom flex items-center justify-between">
-        {/* Logo */}
         <Link to="/" className="flex items-center">
-          <Scissors className="h-6 w-6 text-brand-gold rotate-45 mr-2" />
-          <div className="flex flex-col">
-            <span className="font-serif text-xl font-semibold text-white">Gustavo Ladeira</span>
-            <span className="text-xs text-brand-gold tracking-wider">VISAGISTA</span>
-          </div>
+          {/* Logo */}
+          <div
+            className="w-10 h-10 bg-contain bg-no-repeat bg-center text-brand-gold mr-2 quality-90"
+            style={{ fontSize:'16px', backgroundImage: `url('${import.meta.env.BASE_URL}logo_brutus2.png')` }}
+          ></div>
+
+          {/* Texto */}
+          {/* <div className="flex flex-col">
+            <span className="font-serif text-xl font-semibold text-white">Brutus</span>
+            <span className="text-xs text-brand-gold tracking-wider">Barbearia</span>
+          </div> */}
         </Link>
+
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
@@ -65,11 +70,10 @@ const Navbar = () => {
             <Link
               key={item.name}
               to={item.path}
-              className={`text-sm font-medium tracking-wide transition-colors ${
-                location.pathname === item.path
-                  ? "text-brand-gold"
-                  : "text-white hover:text-brand-gold"
-              }`}
+              className={`text-sm font-medium tracking-wide transition-colors ${location.pathname === item.path
+                ? "text-brand-gold"
+                : "text-white hover:text-brand-gold"
+                }`}
             >
               {item.name}
             </Link>
@@ -84,7 +88,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <button 
+        <button
           className="md:hidden text-white"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
@@ -95,20 +99,18 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       <div
-        className={`md:hidden absolute top-full left-0 right-0 bg-brand-black transition-all duration-300 overflow-hidden ${
-          isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-        }`}
+        className={`md:hidden absolute top-full left-0 right-0 bg-brand-black transition-all duration-300 overflow-hidden ${isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          }`}
       >
         <div className="container-custom py-5 flex flex-col space-y-4">
           {navItems.map((item) => (
             <Link
               key={item.name}
               to={item.path}
-              className={`text-sm font-medium py-2 ${
-                location.pathname === item.path
-                  ? "text-brand-gold"
-                  : "text-white"
-              }`}
+              className={`text-sm font-medium py-2 ${location.pathname === item.path
+                ? "text-brand-gold"
+                : "text-white"
+                }`}
             >
               {item.name}
             </Link>

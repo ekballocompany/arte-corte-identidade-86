@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import SectionTitle from "../components/SectionTitle";
 import { AspectRatio } from "../components/ui/aspect-ratio";
-import { 
+import {
   Carousel,
   CarouselContent,
   CarouselItem,
@@ -17,7 +17,7 @@ const GalleryPage = () => {
   // Gallery categories
   const categories = ["Todos", "Cortes", "Barbas", "Ambiente"];
   const [activeCategory, setActiveCategory] = useState("Todos");
-  
+
   // Updated gallery items with carefully selected dark theme images
   const galleryItems = [
     // Cortes
@@ -110,8 +110,8 @@ const GalleryPage = () => {
   ];
 
   // Filtered items based on active category
-  const filteredItems = activeCategory === "Todos" 
-    ? galleryItems 
+  const filteredItems = activeCategory === "Todos"
+    ? galleryItems
     : galleryItems.filter(item => item.category === activeCategory);
 
   return (
@@ -119,11 +119,11 @@ const GalleryPage = () => {
       {/* Hero Section com nova imagem dark */}
       <section className="relative pt-32 pb-20 bg-brand-gray">
         {/* <div className="absolute inset-0 z-0 bg-black/40"></div> */}
-        <div 
+        <div
           className="absolute inset-0 z-0 bg-cover bg-center bg-brand-black"
-          // style={{ backgroundImage: "Deixei a cor em preto / sem imagem mesmo" }}
+        // style={{ backgroundImage: "Deixei a cor em preto / sem imagem mesmo" }}
         ></div>
-        
+
         <div className="container-custom relative z-10">
           <div className="max-w-2xl mx-auto text-center">
             <h5 className="text-brand-gold font-medium mb-4 tracking-widest">GALERIA</h5>
@@ -131,7 +131,7 @@ const GalleryPage = () => {
               Nossa Experiência em Imagens
             </h1>
             <p className="text-white/90 text-sm md:text-md">
-              Conheça nosso trabalho através de uma seleção de fotos que demonstram a qualidade e precisão do nosso visagismo.
+              Conheça nosso trabalho através de uma seleção de fotos que demonstram a qualidade e precisão dos nossos serviços.
             </p>
           </div>
         </div>
@@ -140,39 +140,38 @@ const GalleryPage = () => {
       {/* Gallery Section - Ajustado para visual mais dark */}
       <section className="section-padding bg-brand-gray/5">
         <div className="container-custom">
-          <SectionTitle 
-            title="Nossa Galeria" 
-            subtitle="Explore os resultados do nosso trabalho em visagismo"
+          <SectionTitle
+            title="Nossa Galeria"
+            subtitle="Explore os resultados do nosso trabalho"
             center
           />
-          
+
           {/* Filter Categories - Estilo ajustado */}
           <div className="flex justify-center flex-wrap gap-2 mb-12">
             {categories.map((category) => (
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`px-6 py-2 rounded-full transition-all ${
-                  activeCategory === category
-                    ? "bg-brand-gold text-white"
-                    : "bg-black/5 text-gray-700 hover:bg-black/10"
-                }`}
+                className={`px-6 py-2 rounded-full transition-all ${activeCategory === category
+                  ? "bg-brand-gold text-white"
+                  : "bg-black/5 text-gray-700 hover:bg-black/10"
+                  }`}
               >
                 {category}
               </button>
             ))}
           </div>
-          
+
           {/* Gallery Grid - Visual aprimorado */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredItems.map((item) => (
-              <div 
-                key={item.id} 
+              <div
+                key={item.id}
                 className="overflow-hidden rounded-lg group relative shadow-lg"
               >
                 <div className="aspect-square">
-                  <img 
-                    src={item.image} 
+                  <img
+                    src={item.image}
                     alt={item.alt}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
@@ -190,7 +189,7 @@ const GalleryPage = () => {
       </section>
 
       {/* Video Section */}
-      <section className="section-padding bg-brand-beige/30">
+      {/* <section className="section-padding bg-brand-beige/30">
         <div className="container-custom">
           <SectionTitle 
             title="Nossos Vídeos" 
@@ -202,7 +201,6 @@ const GalleryPage = () => {
             {[1, 2].map((item) => (
               <div key={item} className="rounded-lg overflow-hidden shadow-lg">
                 <div className="aspect-video bg-gray-200 relative">
-                  {/* Replace with actual video embed or thumbnail */}
                   <img 
                     src={item === 1 
                       ? "https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?q=80&w=1171&auto=format&fit=crop" 
@@ -229,7 +227,7 @@ const GalleryPage = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
     </>
   );
