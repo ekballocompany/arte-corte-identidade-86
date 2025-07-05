@@ -1,100 +1,103 @@
-
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import SectionTitle from "../components/SectionTitle";
+import { Clock } from "lucide-react";
 
 const ServicesPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  // Function to open WhatsApp
   const handleBooking = () => {
-    window.open("https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20agendar%20um%20horário", "_blank");
+    window.open(
+      "https://booksy.com/pt-br/instant-experiences/widget/111533",
+      "_blank"
+    );
   };
 
-  // Services data
-  const services = [
-    {
-      id: 1,
-      title: "Corte Visagista",
-      description: "O corte visagista é personalizado com base na análise do formato do seu rosto, tipo de cabelo e estilo pessoal. Cada detalhe é pensado para valorizar suas características e transmitir sua identidade.",
-      details: [
-        "Análise completa do formato do rosto",
-        "Estudo de textura e tipo de cabelo",
-        "Consideração do seu estilo pessoal",
-        "Técnicas precisas de corte",
-        "Acabamento impecável"
-      ],
-      image: "https://images.pexels.com/photos/3037244/pexels-photo-3037244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      duration: "45 minutos",
-      price: "R$ 120,00"
-    },
-    {
-      id: 2,
-      title: "Barba Designer",
-      description: "Modelagem precisa da barba, alinhada com suas feições faciais para uma harmonia visual completa. Utilizamos técnicas exclusivas para definir contornos que complementam o formato do seu rosto.",
-      details: [
-        "Análise do formato do rosto",
-        "Modelagem personalizada",
-        "Definição de contornos",
-        "Hidratação com produtos premium",
-        "Acabamento com navalha"
-      ],
-      image: "https://images.pexels.com/photos/5853394/pexels-photo-5853394.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      duration: "30 minutos",
-      price: "R$ 80,00"
-    },
-    {
-      id: 3,
-      title: "Consultoria de Imagem",
-      description: "Um serviço completo que vai além do corte. Analisamos seu estilo de vida, profissão e personalidade para criar uma identidade visual que transmita quem você é, incluindo recomendações de produtos e manutenção.",
-      details: [
-        "Análise de estilo pessoal e profissional",
-        "Corte personalizado",
-        "Modelagem de barba (quando aplicável)",
-        "Recomendação de produtos específicos",
-        "Orientações de manutenção em casa"
-      ],
-      image: "https://images.pexels.com/photos/11403966/pexels-photo-11403966.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      duration: "1 hora e 30 minutos",
-      price: "R$ 250,00"
-    },
-    {
-      id: 4,
-      title: "Corte + Barba",
-      description: "A combinação perfeita dos nossos serviços de corte visagista e modelagem de barba, criando uma harmonia visual completa entre cabelo e barba que valoriza suas características faciais.",
-      details: [
-        "Análise integrada de cabelo e barba",
-        "Corte visagista personalizado",
-        "Modelagem de barba alinhada ao corte",
-        "Hidratação completa",
-        "Finalização premium"
-      ],
-      image: "https://images.pexels.com/photos/1319461/pexels-photo-1319461.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      duration: "1 hora e 15 minutos",
-      price: "R$ 180,00"
-    }
-  ];
+  const categorizedServices = {
+    "Brutus Visagismo": [
+      { title: "Consultoria visagista com Gustavo Ladeira", price: "R$ 499,00", duration: "2h" },
+      { title: "Consultoria visagista com o Jociélio Lopes", price: "R$ 499,00", duration: "2h" },
+      { title: "Consultoria visagista com thalison Avezú", price: "R$ 499,90", duration: "2h 30min" }
+    ],
+    "Brutus Exclusive": [
+      { title: "Corte", price: "R$ 85,00", duration: "1h" },
+      { title: "Barba", price: "R$ 85,00", duration: "30min" },
+      { title: "Barba + pezinho", price: "R$ 100,00", duration: "40min" },
+      { title: "Cabelo + barba", price: "R$ 150,00", duration: "1h" },
+      { title: "Cabelo + barba + sobrancelha", price: "R$ 185,00", duration: "1h" },
+      { title: "Cabelo + barba + sobrancelha + depilação nariz", price: "R$ 220,00", duration: "1h 30min" },
+      { title: "Coloração da barba", price: "R$ 60,00", duration: "30min" },
+      { title: "Pezinho", price: "R$ 40,00", duration: "30min" },
+      { title: "Hidratação com ozônio", price: "R$ 80,00", duration: "30min" },
+      { title: "Sobrancelha", price: "R$ 40,00", duration: "30min" },
+      { title: "Depilação nasal", price: "R$ 40,00", duration: "30min" },
+      { title: "Corte + Selante", price: "R$ 280,00", duration: "2h" },
+      { title: "Selante", price: "R$ 200,00", duration: "1h 30min" }
+    ],
+    "Brutus Convencional": [
+      { title: "Corte", price: "R$ 65,00", duration: "30min" },
+      { title: "Cabelo + sobrancelha", price: "R$ 95,00", duration: "30min" },
+      { title: "Barba", price: "R$ 65,00", duration: "30min" },
+      { title: "Cabelo + barba + sobrancelha", price: "R$ 140,00", duration: "1h" },
+      { title: "Coloração de barba", price: "R$ 40,00", duration: "30min" },
+      { title: "Barba + coloração", price: "R$ 95,00", duration: "1h" },
+      { title: "Selante", price: "R$ 150,00+", duration: "30min" },
+      { title: "Corte cabelo longo na tesoura", price: "R$ 70,00", duration: "1h" },
+      { title: "Barba + cabelo", price: "R$ 120,00", duration: "1h" },
+      { title: "Pezinho", price: "R$ 30,00", duration: "30min" },
+      { title: "Selante + corte", price: "R$ 215,00", duration: "1h 30min" },
+      { title: "Sobrancelha", price: "R$ 30,00", duration: "30min" },
+      { title: "Cabelo + depilação nariz/orelha", price: "R$ 125,00", duration: "1h" },
+      { title: "Depilação nariz com cera quente", price: "R$ 30,00", duration: "30min" },
+      { title: "Luzes", price: "R$ 200,00", duration: "2h" },
+      { title: "Cabelo + sobrancelha + depilação nariz e orelha", price: "R$ 140,00", duration: "1h" },
+      { title: "Hidratação", price: "R$ 60,00", duration: "30min" },
+      { title: "Cabelo + hidratação", price: "R$ 125,00", duration: "1h" },
+      { title: "Cabelo + barba + selante", price: "R$ 260,00", duration: "2h 30min" },
+      { title: "Platinado", price: "R$ 250,00", duration: "2h 30min" }
+    ],
+    "Brutus Estética": [
+      { title: "Limpeza de pele", price: "R$ 180,00", duration: "1h 30min" },
+      { title: "Mão / pé feminino", price: "R$ 90,00", duration: "1h 30min" },
+      { title: "Mão feminina", price: "R$ 45,00", duration: "40min" },
+      { title: "Pé feminino", price: "R$ 45,00", duration: "40min" },
+      { title: "Unha de fibra", price: "R$ 230,00", duration: "2h" },
+      { title: "Esmaltação tradicional", price: "R$ 30,00", duration: "15min" },
+      { title: "Manutenção unha de fibra", price: "R$ 150,00", duration: "1h" },
+      { title: "Mão / pé masculino", price: "R$ 110,00", duration: "1h" },
+      { title: "Pé masculino", price: "R$ 55,00", duration: "30min" },
+      { title: "Mão masculina", price: "R$ 55,00", duration: "30min" },
+      { title: "Plásticas dos pés", price: "R$ 95,00", duration: "30min" },
+      { title: "Massagem relaxante dos pés", price: "R$ 80,00", duration: "15min" },
+      { title: "Banho de parafina dos pés", price: "R$ 40,00", duration: "15min" },
+      { title: "Esmaltação em gel", price: "R$ 50,00", duration: "30min" },
+      { title: "Drenagem linfática", price: "R$ 120,00", duration: "1h" },
+      { title: "Massagem modeladora", price: "R$ 150,00", duration: "1h" },
+      { title: "Massagem relaxante / com escalda pés", price: "R$ 180,00", duration: "1h 15min" },
+      { title: "Sobrancelha na pinça ou cera", price: "R$ 60,00", duration: "30min" },
+      { title: "Henna", price: "R$ 40,00", duration: "30min" },
+      { title: "Depilação axilas", price: "R$ 60,00", duration: "15min" },
+      { title: "Depilação peito / costas", price: "R$ 90,00", duration: "30min" }
+    ]
+  };
+
+  const categories = Object.keys(categorizedServices);
+  const [activeCategory, setActiveCategory] = useState(categories[0]);
 
   return (
     <>
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-brand-gray">
-        {/* <div className="absolute inset-0 z-0 bg-black/40"></div> */}
-        <div
-          className="absolute inset-0 z-0 bg-cover bg-center bg-brand-black"
-        // style={{ backgroundImage: "Deixei a cor em preto / sem imagem mesmo" }}
-        ></div>
-
-
+        <div className="absolute inset-0 z-0 bg-cover bg-center bg-brand-black"></div>
         <div className="container-custom relative z-10">
           <div className="max-w-2xl mx-auto text-center">
             <h5 className="text-brand-gold font-medium mb-4 tracking-widest">SERVIÇOS</h5>
             <h1 className="heading-xl text-white mb-6">
-              Experiências exclusivas < br /> Brutus Barbearia
+              Experiências exclusivas <br /> Brutus Barbearia
             </h1>
             <p className="text-white/90 md:text-md text-sm">
-              Descubra  serviços personalizados que transformam sua aparência e revelam sua verdadeira identidade visual com autenticidade e alto padrão.
+              Descubra serviços personalizados que transformam sua aparência e revelam sua verdadeira identidade visual com autenticidade e alto padrão.
             </p>
           </div>
         </div>
@@ -109,50 +112,43 @@ const ServicesPage = () => {
             center
           />
 
-          <div className="space-y-24 mt-16">
-            {services.map((service, index) => (
-              <div
-                key={service.id}
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 !== 0 ? "lg:grid-flow-dense" : ""
+          {/* Filter Categories */}
+          <div className="flex justify-center flex-wrap gap-2 mb-12">
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setActiveCategory(category)}
+                className={`px-6 py-2 rounded-full transition-all ${activeCategory === category
+                  ? "bg-brand-gold text-white"
+                  : "bg-black/5 text-gray-700 hover:bg-black/10"
                   }`}
               >
-                <div className={index % 2 !== 0 ? "lg:col-start-2" : ""}>
-                  <h3 className="heading-lg mb-4">{service.title}</h3>
-                  <p className="text-gray-600 mb-6">{service.description}</p>
+                {category}
+              </button>
+            ))}
+          </div>
 
-                  <div className="space-y-3 mb-8">
-                    {service.details.map((detail, i) => (
-                      <div key={i} className="flex items-center">
-                        <div className="w-2 h-2 bg-brand-gold rounded-full mr-3"></div>
-                        <span className="text-gray-700">{detail}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-8">
-                    <div className="bg-brand-beige/30 px-4 py-2 rounded-md">
-                      <span className="text-sm text-gray-600">Duração</span>
-                      <p className="font-medium">{service.duration}</p>
-                    </div>
-                    <div className="bg-brand-beige/30 px-4 py-2 rounded-md">
-                      <span className="text-sm text-gray-600">Investimento</span>
-                      <p className="font-medium">{service.price}</p>
-                    </div>
-                  </div>
-
-                  <button onClick={handleBooking} className="btn-primary">
-                    Agendar este serviço
-                  </button>
+          {/* Services Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {categorizedServices[activeCategory].map((service, index) => (
+              <div
+                key={index}
+                className="border rounded-xl p-6 shadow-sm flex flex-col justify-between"
+              >
+                <div className="flex justify-between items-start mb-2">
+                  <h4 className="text-md font-semibold text-gray-800 pr-2 flex-1">
+                    {service.title}
+                  </h4>
+                  <span className="text-sm text-gray-500 font-normal inline-flex items-center shrink-0 whitespace-nowrap">
+                    {service.duration}
+                    <Clock className="w-4 h-4 text-gray-500 ml-1" />
+                  </span>
                 </div>
 
-                <div className={`h-[400px] rounded-lg overflow-hidden ${index % 2 !== 0 ? "lg:col-start-1" : ""
-                  }`}>
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+                <p className="text-brand-gold font-bold mb-4">{service.price}</p>
+                <button onClick={handleBooking} className="btn-primary mt-auto w-full">
+                  Agendar este serviço
+                </button>
               </div>
             ))}
           </div>

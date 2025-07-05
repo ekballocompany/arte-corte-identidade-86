@@ -2,6 +2,8 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import SectionTitle from "../components/SectionTitle";
+import { Crown, Eye, Scissors, Sparkles } from "lucide-react";
+import { TestimonialsCarousel } from "@/components/TestimonialsCarousel";
 
 const AboutPage = () => {
   useEffect(() => {
@@ -45,13 +47,13 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* About Gustavo */}
-      <section className="section-padding bg-white">
+      {/* About Brutus */}
+      <section className="py-8 bg-white">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="h-[500px] rounded-lg overflow-hidden">
               <img
-                src="https://images.pexels.com/photos/7697671/pexels-photo-7697671.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                src="about/brutus_about.jpg"
                 alt="Gustavo Ladeira"
                 className="w-full h-full object-cover"
               />
@@ -59,20 +61,20 @@ const AboutPage = () => {
 
             <div>
               <SectionTitle
-                title="Gustavo Ladeira"
-                subtitle="Visagista e especialista em cortes masculinos"
+                title="Sonhar grande, com os pés no chão"
+                subtitle="Conheça mais sobre a Brutus Barbearia"
               />
 
               <p className="text-gray-600 mb-6">
-                Com mais de 10 anos de experiência no universo da beleza masculina, Gustavo Ladeira construiu sua carreira focada na arte do visagismo. Sua jornada começou com uma formação tradicional em barbearia, mas logo se expandiu para uma abordagem mais sofisticada e personalizada.
+                A Brutus Barbearia nasceu com uma ideia simples e poderosa: valorizar o homem moderno com estilo, respeito e autenticidade. Fundada por Rener de Oliveira, tudo começou com apenas uma cadeira, uma tesoura e uma visão clara de futuro: transformar a experiência de barbearia em algo além do corte — em um momento de cuidado e confiança.
               </p>
 
               <p className="text-gray-600 mb-6">
-                Formado em visagismo pela renomada Academia Internacional de Estética, Gustavo também possui especializações em cortes europeus e técnicas avançadas de barba. Sua constante busca por aperfeiçoamento o levou a workshops e cursos internacionais, trazendo para seus clientes o que há de mais atual nas tendências mundiais.
+                Investimos constantemente em formações, mentorias e especializações, buscando evolução técnica e humana. Aqui, não existem atalhos: há respeito, esforço e paixão pelo que fazemos. A cada cliente que passa pela Brutus, renovamos nosso compromisso com a qualidade, a ética e o estilo.
               </p>
 
               <p className="text-gray-600 mb-8">
-                "Cada rosto carrega uma história. O corte deve contá-la." Esta filosofia norteia todo o trabalho de Gustavo, que acredita que o visagismo vai muito além da estética – é uma forma de expressão da identidade e personalidade de cada homem.
+                Durante a pandemia, quando muitos fecharam as portas, a Brutus reformou as ideias. Mesmo em tempos difíceis, acreditamos que os desafios moldam os fortes. Com coragem, repensamos cada detalhe — da fachada ao atendimento — para oferecer mais do que um serviço: uma experiência completa de bem-estar masculino.
               </p>
 
               <button onClick={handleBooking} className="btn-primary">
@@ -83,15 +85,56 @@ const AboutPage = () => {
         </div>
       </section>
 
+      {/* Antes e depois */}
+      <section className="py-8 bg-brand-beige/30">
+        <div className="container-custom">
+
+          <p className="text-center max-w-3xl mx-auto text-gray-800 mb-6">
+            Mesmo com poucos recursos, demos o primeiro passo. Reformamos, replanejamos, nos reposicionamos. E ali nasceu uma nova fase da Brutus: mais estruturada, mais profissional, mais alinhada com o sonho que me deu origem: <em>“Eu decidi acreditar. Mesmo em meio ao caos”.</em>
+          </p>
+
+          {/* <p className="text-center text-lg sm:text-xl font-medium text-brand-brown mb-8 max-w-3xl mx-auto">
+            Mesmo com poucos recursos, eu dei o primeiro passo. Reformei, replanejei, me reposicionei. Naquele momento, nasceu uma nova fase da Brutus: mais estruturada, mais profissional, mais alinhada com o sonho que me deu origem.<em>“Eu decidi acreditar. Mesmo em meio ao caos”.</em>
+          </p> */}
+
+          <div className="flex flex-wrap justify-center items-center gap-4">
+            {/* Imagem Antes */}
+            <div className="relative w-full sm:w-[40%] aspect-[4/3]">
+              <img
+                src="about/brutos_antes.jpeg"
+                alt="Antes"
+                className="w-full h-full object-cover rounded-lg shadow-lg"
+              />
+              <div className="absolute bottom-0 left-0 w-full bg-black/60 text-white text-center py-2 rounded-b-lg text-sm">
+                Antes
+              </div>
+            </div>
+
+            {/* Imagem Depois */}
+            <div className="relative w-full sm:w-[40%] aspect-[4/3]">
+              <img
+                src="about/brutos_depois.jpeg"
+                alt="Depois"
+                className="w-full h-full object-cover rounded-lg shadow-lg"
+              />
+              <div className="absolute bottom-0 left-0 w-full bg-black/60 text-white text-center py-2 rounded-b-lg text-sm">
+                Depois
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Philosophy */}
-      <section className="section-padding bg-brand-beige/30">
+      <section className="py-8 bg-white">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center lg:grid-flow-dense">
+
             <div className="lg:col-start-2">
-              <div className="h-[400px] rounded-lg overflow-hidden">
+              <div className="h-[650px] rounded-lg overflow-hidden">
                 <img
-                  src="https://images.pexels.com/photos/3992874/pexels-photo-3992874.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                  alt="Filosofia de trabalho"
+                  src="about/renner.jpeg"
+                  alt="Renner no Barber Day University"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -99,56 +142,36 @@ const AboutPage = () => {
 
             <div className="lg:col-start-1">
               <SectionTitle
-                title="Nossa Filosofia"
-                subtitle="A abordagem que torna nosso trabalho único"
+                title="Inovar com os pés no chão"
+                subtitle="Resiliência, liderança e propósito"
               />
 
               <p className="text-gray-600 mb-6">
-                O visagismo é uma ciência e uma arte que estuda a relação entre as características físicas e a personalidade de uma pessoa, harmonizando-as através de técnicas específicas. No nosso trabalho, valorizamos:
+                Desde o início, Rener de Oliveira entendeu que crescer exigia aprendizado constante. Ele foi atrás de cursos, mentorias e estratégias sólidas para conquistar mais clientes e reinvestir na Brutus Barbearia.
               </p>
 
-              <div className="space-y-4 mb-8">
-                <div className="flex items-start">
-                  <div className="w-10 h-10 rounded-full bg-brand-gold/20 flex items-center justify-center mr-4 mt-1">
-                    <span className="text-brand-gold font-bold">1</span>
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-semibold mb-1">Personalização</h4>
-                    <p className="text-gray-600">Cada cliente recebe um atendimento exclusivo, com análise detalhada de suas características faciais e estilo pessoal.</p>
-                  </div>
-                </div>
+              <p className="text-gray-600 mb-6">
+                Após uma grande expansão — com estrutura nova e quatro cadeiras — enfrentou um dos maiores desafios de sua jornada: a saída repentina de toda a equipe. Foi nesse momento que ele descobriu sua força e resiliência. Recomeçou, contratou novamente e reconstruiu a cultura da empresa do zero.
+              </p>
 
-                <div className="flex items-start">
-                  <div className="w-10 h-10 rounded-full bg-brand-gold/20 flex items-center justify-center mr-4 mt-1">
-                    <span className="text-brand-gold font-bold">2</span>
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-semibold mb-1">Precisão técnica</h4>
-                    <p className="text-gray-600">Utilizamos técnicas avançadas e ferramentas de alta qualidade para garantir cortes impecáveis e duradouros.</p>
-                  </div>
-                </div>
+              <p className="text-gray-600 mb-6">
+                “Deus tem colocado pessoas incríveis no meu caminho”, afirma Rener. “Gente de valor, que acredita na Brutus e tem sido essencial para o nosso crescimento”.
+              </p>
 
-                <div className="flex items-start">
-                  <div className="w-10 h-10 rounded-full bg-brand-gold/20 flex items-center justify-center mr-4 mt-1">
-                    <span className="text-brand-gold font-bold">3</span>
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-semibold mb-1">Equilíbrio e harmonia</h4>
-                    <p className="text-gray-600">Buscamos o equilíbrio perfeito entre as características naturais do cliente e o estilo desejado, criando uma harmonia visual única.</p>
-                  </div>
-                </div>
-              </div>
+              <p className="text-gray-600 mb-8">
+                Um de seus maiores aprendizados foi entender a diferença entre ser amigo e ser líder. Hoje, ele reconhece que liderar também é proteger o sonho, sustentar a cultura e estabelecer limites para garantir o respeito e o crescimento coletivo.
+              </p>
 
               <blockquote className="border-l-4 border-brand-gold pl-4 italic text-gray-700">
-                "O visagismo não é apenas sobre aparência, mas sobre revelar quem você realmente é através da sua imagem."
+                "O segredo? Sonhar grande, mas com os pés no chão."
               </blockquote>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Expertise */}
-      <section className="section-padding bg-white">
+
+      <section className="section-padding bg-brand-beige/30">
         <div className="container-custom">
           <SectionTitle
             title="Nossa Expertise"
@@ -156,45 +179,55 @@ const AboutPage = () => {
             center
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+
+            {/* Brutus Barbearia Convencional */}
             <div className="bg-white p-8 rounded-lg shadow-md border border-gray-100">
               <div className="bg-brand-gold/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 text-brand-gold">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
-                </svg>
+                <Scissors className="w-8 h-8 text-brand-gold" />
               </div>
-              <h3 className="heading-sm mb-4">Visagismo Avançado</h3>
+              <h3 className="heading-sm mb-4">Brutus Barbearia</h3>
               <p className="text-gray-600">
-                Aplicamos técnicas avançadas de visagismo que consideram não apenas o formato do rosto, mas também a personalidade e estilo de vida do cliente.
+                Nossa unidade tradicional, referência em cortes masculinos, atendimento acolhedor e ambiente pensado para o bem-estar do homem moderno.
+              </p>
+            </div>
+            {/* Brutus Exclusive */}
+            <div className="bg-white p-8 rounded-lg shadow-md border border-gray-100">
+              <div className="bg-brand-gold/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                <Crown className="w-8 h-8 text-brand-gold" />
+              </div>
+              <h3 className="heading-sm mb-4">Brutus Exclusive</h3>
+              <p className="text-gray-600">
+                Um espaço premium que oferece experiências exclusivas, com serviços personalizados e foco total no conforto e na sofisticação.
               </p>
             </div>
 
+            {/* Brutus Visagismo */}
             <div className="bg-white p-8 rounded-lg shadow-md border border-gray-100">
               <div className="bg-brand-gold/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 text-brand-gold">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
-                </svg>
+                <Eye className="w-8 h-8 text-brand-gold" />
               </div>
-              <h3 className="heading-sm mb-4">Técnicas Internacionais</h3>
+              <h3 className="heading-sm mb-4">Brutus Visagismo</h3>
               <p className="text-gray-600">
-                Dominamos técnicas de corte e barba de diferentes partes do mundo, adaptando-as para atender às necessidades específicas dos clientes brasileiros.
+                Técnica avançada que une arte e ciência para transformar aparência em identidade, considerando traços, personalidade e estilo de vida.
               </p>
             </div>
 
+            {/* Brutus Estética */}
             <div className="bg-white p-8 rounded-lg shadow-md border border-gray-100">
               <div className="bg-brand-gold/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 text-brand-gold">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
-                </svg>
+                <Sparkles className="w-8 h-8 text-brand-gold" />
               </div>
-              <h3 className="heading-sm mb-4">Consultoria de Imagem</h3>
+              <h3 className="heading-sm mb-4">Brutus Estética</h3>
               <p className="text-gray-600">
-                Oferecemos orientação completa sobre como manter e valorizar sua imagem pessoal, incluindo recomendações de produtos e cuidados diários.
+                Cuidados com a pele, limpeza facial e outros tratamentos estéticos pensados para o homem que valoriza saúde, imagem e autocuidado.
               </p>
             </div>
+
           </div>
         </div>
       </section>
+
 
       {/* Testimonials */}
       <section className="section-padding bg-brand-gray text-white">
@@ -206,21 +239,13 @@ const AboutPage = () => {
             light
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+          {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             {[1, 2, 3].map((item) => (
               <div key={item} className="bg-white/5 backdrop-blur-sm p-8 rounded-lg border border-white/10">
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center">
-                    <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
-                      <img
-                        src="/placeholder.svg"
-                        alt={`Cliente ${item}`}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
                     <div>
-                      <h4 className="font-medium">Cliente {item}</h4>
-                      <p className="text-sm text-gray-400">Cliente desde 202{item}</p>
+                      <p className="text-sm text-gray-400">Wesley</p>
                     </div>
                   </div>
                   <div className="text-brand-gold">
@@ -243,7 +268,9 @@ const AboutPage = () => {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
+          <TestimonialsCarousel />
+
         </div>
       </section>
 
