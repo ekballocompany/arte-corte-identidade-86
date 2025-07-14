@@ -1,13 +1,5 @@
 import { useEffect, useState } from "react";
 import SectionTitle from "../components/SectionTitle";
-import { AspectRatio } from "../components/ui/aspect-ratio";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious
-} from "../components/ui/carousel";
 
 const GalleryPage = () => {
   useEffect(() => {
@@ -15,123 +7,114 @@ const GalleryPage = () => {
   }, []);
 
   // Gallery categories
-  const categories = ["Todos", "Cortes", "Barbas", "Ambiente", "Brutus Exclusive", "Brutus Visagismo",  "Brutus Estética"];
+  const categories = ["Todos", "Cortes", "Barbas", "Ambiente", "Brutus Exclusive", "Brutus Visagismo", "Brutus Estética"];
   const [activeCategory, setActiveCategory] = useState("Todos");
 
-  // Updated gallery items with carefully selected dark theme images
+  // Toda vez que adicionar uma nova imagem registrar o último id utilizado para não dar merda, qualquer dúvida pergunta para o Breno
+  // GALLERYID: 89
   const galleryItems = [
-    // Cortes
-    {
-      id: 1,
-      image: "https://images.unsplash.com/photo-1662123844664-7235ecbb4e53?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      category: "Cortes"
-    },
-    {
-      id: 2,
-      image: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?q=80&w=2070",
-      category: "Cortes"
-    },
-    {
-      id: 3,
-      image: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?q=80&w=2070",
-      category: "Cortes"
-    },
-    {
-      id: 4,
-      image: "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=2074",
-      category: "Cortes"
-    },
-    // Barbas
-    {
-      id: 5,
-      image: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?q=80&w=2070",
-      category: "Barbas"
-    },
-    {
-      id: 6,
-      image: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=2070",
-      category: "Barbas"
-    },
-    {
-      id: 7,
-      image: "https://images.unsplash.com/photo-1517832606299-7ae9b720a186?q=80&w=2076",
-      category: "Barbas"
-    },
-    // Ambiente
-    {
-      id: 8,
-      image: "https://images.unsplash.com/photo-1521322714240-ee1d383eab62?q=80&w=2070",
-      category: "Ambiente"
-    },
-    {
-      id: 9,
-      image: "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      category: "Ambiente"
-    },
-    {
-      id: 10,
-      image: "https://images.unsplash.com/photo-1605497788044-5a32c7078486?q=80&w=2074",
-      category: "Ambiente"
-    },
-    {
-      id: 11,
-      image: "https://images.unsplash.com/photo-1705976063063-af7d6b9a4083?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      category: "Ambiente"
-    },
-    {
-      id: 12,
-      image: "https://images.unsplash.com/photo-1512690459411-b9245aed614b?q=80&w=2070",
-      category: "Ambiente"
-    },
-    // Brutus Estética
-    {
-      id: 13,
-      image: "https://images.unsplash.com/photo-1512690459411-b9245aed614b?q=80&w=2070",
-      category: "Brutus Estética"
-    },
-    {
-      id: 14,
-      image: "https://images.unsplash.com/photo-1512690459411-b9245aed614b?q=80&w=2070",
-      category: "Brutus Estética"
-    },
-    {
-      id: 15,
-      image: "https://images.unsplash.com/photo-1512690459411-b9245aed614b?q=80&w=2070",
-      category: "Brutus Estética"
-    },
-    // Brutus Exclusive
-    {
-      id: 13,
-      image: "https://images.unsplash.com/photo-1512690459411-b9245aed614b?q=80&w=2070",
-      category: "Brutus Exclusive"
-    },
-    {
-      id: 14,
-      image: "https://images.unsplash.com/photo-1512690459411-b9245aed614b?q=80&w=2070",
-      category: "Brutus Exclusive"
-    },
-    {
-      id: 15,
-      image: "https://images.unsplash.com/photo-1512690459411-b9245aed614b?q=80&w=2070",
-      category: "Brutus Exclusive"
-    },
-    // Brutus Visagismo
-    {
-      id: 13,
-      image: "https://images.unsplash.com/photo-1512690459411-b9245aed614b?q=80&w=2070",
-      category: "Brutus Visagismo"
-    },
-    {
-      id: 14,
-      image: "https://images.unsplash.com/photo-1512690459411-b9245aed614b?q=80&w=2070",
-      category: "Brutus Visagismo"
-    },
-    {
-      id: 15,
-      image: "https://images.unsplash.com/photo-1512690459411-b9245aed614b?q=80&w=2070",
-      category: "Brutus Visagismo"
-    },
+    // Cortes (IDs 1–23)
+    { id: 1, image: "./gallery/cortes/IMG_0532.jpg", category: "Cortes" },
+    { id: 2, image: "./gallery/cortes/IMG_0783.jpg", category: "Cortes" },
+    { id: 3, image: "./gallery/cortes/IMG_999.JPG", category: "Cortes" },
+    { id: 4, image: "./gallery/cortes/IMG_1163.JPG", category: "Cortes" },
+    { id: 5, image: "./gallery/cortes/IMG_1205.jpg", category: "Cortes" },
+    { id: 6, image: "./gallery/cortes/IMG_1322.jpg", category: "Cortes" },
+    { id: 7, image: "./gallery/cortes/IMG_1877.jpg", category: "Cortes" },
+    { id: 8, image: "./gallery/cortes/IMG_9996.JPG", category: "Cortes" },
+    { id: 9, image: "./gallery/cortes/IMG_2086.jpg", category: "Cortes" },
+    { id: 10, image: "./gallery/cortes/IMG_2461.jpg", category: "Cortes" },
+    { id: 11, image: "./gallery/cortes/IMG_2778.jpg", category: "Cortes" },
+    { id: 12, image: "./gallery/cortes/IMG_3630.jpg", category: "Cortes" },
+    { id: 13, image: "./gallery/cortes/IMG_4853.jpg", category: "Cortes" },
+    { id: 14, image: "./gallery/cortes/IMG_4854.jpg", category: "Cortes" },
+    { id: 15, image: "./gallery/cortes/IMG_4862.jpg", category: "Cortes" },
+    { id: 16, image: "./gallery/cortes/IMG_7974.jpg", category: "Cortes" },
+    { id: 17, image: "./gallery/cortes/IMG_7971.PNG", category: "Cortes" },
+    { id: 18, image: "./gallery/cortes/IMG_7972.jpg", category: "Cortes" },
+    { id: 19, image: "./gallery/cortes/IMG_8904.JPG", category: "Cortes" },
+    { id: 20, image: "./gallery/cortes/IMG_9994.jpeg", category: "Cortes" },
+    { id: 21, image: "./gallery/cortes/IMG_9997.jpeg", category: "Cortes" },
+    { id: 22, image: "./gallery/cortes/IMG_9995.jpeg", category: "Cortes" },
+    { id: 23, image: "./gallery/cortes/IMG_9993.jpeg", category: "Cortes" },
+    { id: 24, image: "./gallery/cortes/IMG_1882.jpg", category: "Cortes" },
+    { id: 25, image: "./gallery/cortes/IMG_9998.jpeg", category: "Cortes" },
+
+    // Barbas (IDs 26–34)
+    { id: 26, image: "./gallery/barbas/IMG_0783.jpg", category: "Barbas" },
+    { id: 27, image: "./gallery/barbas/IMG_1205.jpg", category: "Barbas" },
+    { id: 28, image: "./gallery/barbas/IMG_1322.jpg", category: "Barbas" },
+    { id: 29, image: "./gallery/barbas/IMG_2086.jpg", category: "Barbas" },
+    { id: 30, image: "./gallery/barbas/IMG_4508.jpg", category: "Barbas" },
+    { id: 31, image: "./gallery/barbas/IMG_4853.jpg", category: "Barbas" },
+    { id: 32, image: "./gallery/barbas/IMG_7067.jpg", category: "Barbas" },
+    { id: 33, image: "./gallery/barbas/IMG_7971.PNG", category: "Barbas" },
+    { id: 34, image: "./gallery/barbas/IMG_8904.JPG", category: "Barbas" },
+
+    // Ambiente (IDs 35–56)
+    { id: 35, image: "./gallery/ambiente/IMG_4026.JPG", category: "Ambiente" },
+    { id: 36, image: "./gallery/ambiente/IMG_4010.jpg", category: "Ambiente" },
+    { id: 37, image: "./gallery/ambiente/IMG_4011.jpeg", category: "Ambiente" },
+    { id: 38, image: "./gallery/ambiente/IMG_4049.JPG", category: "Ambiente" },
+    { id: 39, image: "./gallery/ambiente/IMG_4063.jpg", category: "Ambiente" },
+    { id: 40, image: "./gallery/ambiente/IMG_4404.jpg", category: "Ambiente" },
+    { id: 41, image: "./gallery/ambiente/IMG_4763.jpg", category: "Ambiente" },
+    { id: 42, image: "./gallery/ambiente/IMG_4784.AVIF", category: "Ambiente" },
+    { id: 43, image: "./gallery/ambiente/IMG_4789.AVIF", category: "Ambiente" },
+    { id: 44, image: "./gallery/ambiente/IMG_4790.AVIF", category: "Ambiente" },
+    { id: 45, image: "./gallery/ambiente/IMG_4796.jpg", category: "Ambiente" },
+    { id: 46, image: "./gallery/ambiente/IMG_4800.jpeg", category: "Ambiente" },
+    { id: 47, image: "./gallery/ambiente/IMG_4801.jpeg", category: "Ambiente" },
+    { id: 48, image: "./gallery/ambiente/IMG_4802.jpeg", category: "Ambiente" },
+    { id: 49, image: "./gallery/ambiente/IMG_4803.jpeg", category: "Ambiente" },
+    { id: 50, image: "./gallery/ambiente/IMG_4804.jpeg", category: "Ambiente" },
+    { id: 51, image: "./gallery/ambiente/IMG_4805.jpeg", category: "Ambiente" },
+    { id: 52, image: "./gallery/ambiente/IMG_4806.jpeg", category: "Ambiente" },
+    { id: 53, image: "./gallery/ambiente/IMG_4807.jpeg", category: "Ambiente" },
+    { id: 54, image: "./gallery/ambiente/IMG_4808.jpeg", category: "Ambiente" },
+    { id: 55, image: "./gallery/ambiente/IMG_4809.jpeg", category: "Ambiente" },
+    { id: 56, image: "./gallery/ambiente/IMG_4810.jpeg", category: "Ambiente" },
+    { id: 57, image: "./gallery/ambiente/IMG_4811.jpg", category: "Ambiente" },
+
+    // Brutus Estética (IDs 58–68)
+    { id: 58, image: "./gallery/estetica/IMG_1009.JPG", category: "Brutus Estética" },
+    { id: 59, image: "./gallery/estetica/IMG_1010.jpeg", category: "Brutus Estética" },
+    { id: 60, image: "./gallery/estetica/IMG_1011.jpeg", category: "Brutus Estética" },
+    { id: 61, image: "./gallery/estetica/IMG_1012.jpeg", category: "Brutus Estética" },
+    { id: 62, image: "./gallery/estetica/IMG_1013.jpeg", category: "Brutus Estética" },
+    { id: 63, image: "./gallery/estetica/IMG_1014.jpeg", category: "Brutus Estética" },
+    { id: 64, image: "./gallery/estetica/IMG_1015.jpeg", category: "Brutus Estética" },
+    { id: 65, image: "./gallery/estetica/IMG_1016.jpeg", category: "Brutus Estética" },
+    { id: 66, image: "./gallery/estetica/IMG_1017.jpeg", category: "Brutus Estética" },
+    { id: 67, image: "./gallery/estetica/IMG_1018.jpeg", category: "Brutus Estética" },
+    { id: 68, image: "./gallery/estetica/IMG_1019.jpeg", category: "Brutus Estética" },
+
+    // Brutus Exclusive (IDs 69–78)
+    { id: 69, image: "./gallery/exclusive/IMG_3903.jpg", category: "Brutus Exclusive" },
+    { id: 70, image: "./gallery/exclusive/IMG_4045.JPG", category: "Brutus Exclusive" },
+    { id: 71, image: "./gallery/exclusive/IMG_4062.JPG", category: "Brutus Exclusive" },
+    { id: 72, image: "./gallery/exclusive/IMG_4063.jpg", category: "Brutus Exclusive" },
+    { id: 73, image: "./gallery/exclusive/IMG_4242.jpg", category: "Brutus Exclusive" },
+    { id: 74, image: "./gallery/exclusive/IMG_4791.JPG", category: "Brutus Exclusive" },
+    { id: 75, image: "./gallery/exclusive/IMG_4854.jpg", category: "Brutus Exclusive" },
+    { id: 76, image: "./gallery/exclusive/IMG_4862.jpg", category: "Brutus Exclusive" },
+    { id: 77, image: "./gallery/exclusive/IMG_4863.jpeg", category: "Brutus Exclusive" },
+    { id: 78, image: "./gallery/exclusive/IMG_4864.jpeg", category: "Brutus Exclusive" },
+
+    // Brutus Visagismo (IDs 79–89)
+    { id: 79, image: "./gallery/visagismo/IMG_992.jpeg", category: "Brutus Visagismo" },
+    { id: 80, image: "./gallery/visagismo/IMG_1110.jpeg", category: "Brutus Visagismo" },
+    { id: 81, image: "./gallery/visagismo/IMG_1111.jpeg", category: "Brutus Visagismo" },
+    { id: 82, image: "./gallery/visagismo/IMG_7817.JPG", category: "Brutus Visagismo" },
+    { id: 83, image: "./gallery/visagismo/IMG_7974.jpg", category: "Brutus Visagismo" },
+    { id: 84, image: "./gallery/visagismo/IMG_7971.PNG", category: "Brutus Visagismo" },
+    { id: 85, image: "./gallery/visagismo/IMG_8169.jpg", category: "Brutus Visagismo" },
+    { id: 86, image: "./gallery/visagismo/IMG_8178.JPG", category: "Brutus Visagismo" },
+    { id: 87, image: "./gallery/visagismo/IMG_9941.JPG", category: "Brutus Visagismo" },
+    { id: 88, image: "./gallery/visagismo/IMG_9942.JPG", category: "Brutus Visagismo" },
   ];
+
+
 
   // Filtered items based on active category
   const filteredItems = activeCategory === "Todos"
@@ -193,7 +176,7 @@ const GalleryPage = () => {
                 key={item.id}
                 className="overflow-hidden rounded-lg group relative shadow-lg"
               >
-                <div className="aspect-square">
+                <div className="aspect-[3/4]">
                   <img
                     src={item.image}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"

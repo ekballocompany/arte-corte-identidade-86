@@ -38,8 +38,12 @@ const Navbar = () => {
     { name: "Contato", path: "/contato" }
   ];
 
-  // WhatsApp booking function
   const handleBooking = () => {
+    window.open("https://booksy.com/pt-br/instant-experiences/widget/111533?fbclid=PAZXh0bgNhZW0CMTEAAad1O8G3jmdS30N7BoTKVBTEIakoT5_EVjBI8W4pMEDfPtuMB70mU3zdIIzZMQ_aem_Gz1fHL3qAEaMplFV70IadQ", "_blank");
+  };
+
+  // Function to open WhatsApp
+  const handleWhatsApp = () => {
     window.open("https://wa.me/5516992832380?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20servi%C3%A7o!%20", "_blank");
   };
 
@@ -53,7 +57,7 @@ const Navbar = () => {
           {/* Logo */}
           <div
             className="w-16 h-16 bg-contain bg-no-repeat bg-center text-brand-gold mr-2 quality-90"
-            style={{ fontSize:'16px', backgroundImage: `url('${import.meta.env.BASE_URL}logo_brutus2.png')` }}
+            style={{ fontSize: '16px', backgroundImage: `url('${import.meta.env.BASE_URL}logo_brutus2.png')` }}
           ></div>
 
           {/* Texto */}
@@ -116,7 +120,7 @@ const Navbar = () => {
             </Link>
           ))}
           <button
-            onClick={handleBooking}
+            onClick={handleWhatsApp}
             className="btn-primary text-sm mt-4 w-full"
             aria-label="Agendar pelo WhatsApp"
           >

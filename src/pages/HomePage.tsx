@@ -10,8 +10,12 @@ const HomePage = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  // Function to open WhatsApp
   const handleBooking = () => {
+    window.open("https://booksy.com/pt-br/instant-experiences/widget/111533?fbclid=PAZXh0bgNhZW0CMTEAAad1O8G3jmdS30N7BoTKVBTEIakoT5_EVjBI8W4pMEDfPtuMB70mU3zdIIzZMQ_aem_Gz1fHL3qAEaMplFV70IadQ", "_blank");
+  };
+
+  // Function to open WhatsApp
+  const handleWhatsApp = () => {
     window.open("https://wa.me/5516992832380?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20servi%C3%A7o!%20", "_blank");
   };
 
@@ -335,7 +339,7 @@ const HomePage = () => {
                 </div>
               </div>
 
-              <button onClick={handleBooking} className="btn-primary">
+              <button onClick={handleWhatsApp} className="btn-primary">
                 Agende pelo WhatsApp
               </button>
             </div>
