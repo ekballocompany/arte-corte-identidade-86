@@ -71,12 +71,12 @@ const ContactPage = () => {
 
   // Function to open WhatsApp
   const handleWhatsApp = () => {
-    window.open("https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20mais%20informações", "_blank");
+    window.open("https://wa.me/5516992832380?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20servi%C3%A7o!%20", "_blank");
   };
 
   // Function to make a call
   const handleCall = () => {
-    window.location.href = "tel:+5511999999999";
+    window.location.href = "tel:+5516992832380";
   };
 
   return (
@@ -120,8 +120,7 @@ const ContactPage = () => {
                   <div>
                     <h4 className="text-xl font-medium mb-2">Endereço</h4>
                     <p className="text-gray-600">
-                      Rua Exemplo, 123 - Bairro<br />
-                      São Paulo - SP, 00000-000
+                      R. Cel. Luíz da Silva Batista, 316 - Jd Irajá,<br />Ribeirão Preto - SP
                     </p>
                   </div>
                 </div>
@@ -132,7 +131,7 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <h4 className="text-xl font-medium mb-2">Telefone</h4>
-                    <p className="text-gray-600">(11) 99999-9999</p>
+                    <p className="text-gray-600">(16) 99283-2380</p>
                     <button
                       onClick={handleCall}
                       className="text-brand-gold font-medium hover:underline mt-1 inline-flex items-center"
@@ -148,7 +147,7 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <h4 className="text-xl font-medium mb-2">E-mail</h4>
-                    <p className="text-gray-600">gustavo@email.com</p>
+                    <p className="text-gray-600">brutusbarbeariarp@gmail.com</p>
                     <a
                       href="mailto:gustavo@email.com"
                       className="text-brand-gold font-medium hover:underline mt-1 inline-flex items-center"
@@ -167,11 +166,11 @@ const ContactPage = () => {
                     <div className="text-gray-600">
                       <div className="flex justify-between">
                         <span>Segunda - Sexta:</span>
-                        <span className="ml-4">09:00 - 19:00</span>
+                        <span className="ml-4">09:00 - 20:00</span>
                       </div>
                       <div className="flex justify-between">
                         <span>Sábado:</span>
-                        <span className="ml-4">09:00 - 18:00</span>
+                        <span className="ml-4">08:30 - 18:00</span>
                       </div>
                       <div className="flex justify-between">
                         <span>Domingo:</span>
@@ -281,7 +280,7 @@ const ContactPage = () => {
       {/* Map Section */}
       <section className="h-[500px] bg-gray-100">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d467688.89495579266!2d-46.92450779726561!3d-23.681531499999988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sS%C3%A3o%20Paulo%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1714109349647!5m2!1spt-BR!2sbr"
+          src="https://www.google.com/maps?q=R.+Cel.+Lu%C3%ADz+da+Silva+Batista,+316,+Jardim+Iraj%C3%A1,+Ribeir%C3%A3o+Preto+SP&output=embed"
           width="100%"
           height="100%"
           style={{ border: 0 }}
